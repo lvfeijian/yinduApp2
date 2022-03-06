@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card{
+  background-color: #F0F0F0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  .header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    margin-top: 0px;
+    z-index: 100;
+    /deep/.van-nav-bar{
+      background: #2B2A28;
+    }
+    /deep/.van-hairline--bottom::after {
+      border-bottom-width: 0px!important;
+    }
+    /deep/.van-nav-bar__content{
+      background: #2B2A28;
+      color: #DEBB81!important;
+      .van-nav-bar__title{
+        color: #DEBB81!important;
+      }
+      .van-icon{
+        font-size: 24px;
+        color: #DEBB81!important;
+      }
+    }
+  }
+  .bg{
+    width: 100vw;
+    height: 234px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .card_info{
+    color: #2B2A28;
+    position: relative;
+    width: 342px;
+    margin-left: 17px;
+    margin-top: 86px;
+    z-index: 100;
+    .card_img{
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+    .bank_name{
+      font-size: 17px;
+      margin-top: 42px;
+      margin-left: 16px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #2B2A28;
+      line-height: 23px;
+    }
+    .bank_number{
+      font-size: 22px;
+      margin-left: 16px;
+      margin-top: 21px;
+      height: 30px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #2B2A28;
+      line-height: 30px;
+      align-items: center;
+    }
+    .change{
+      width: 342px;
+      height: 42px;
+      line-height: 42px;
+      background: linear-gradient(180deg, #DEBB81 0%, #CFA35E 100%);
+      border-radius: 21px;
+      text-align: center;
+      color: #2B2A28;
+      margin-top: 80px;
+    }
+  }
+  
+}

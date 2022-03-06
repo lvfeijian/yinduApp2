@@ -1,0 +1,62 @@
+.app_download{
+  .header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    margin-top: 0px;
+    z-index: 100;
+    /deep/.van-nav-bar{
+      background: #2B2A28;
+    }
+    /deep/.van-hairline--bottom::after {
+      border-bottom-width: 0px!important;
+    }
+    /deep/.van-nav-bar__content{
+      background: #2B2A28;
+      color: #DEBB81!important;
+      .van-nav-bar__title{
+        color: #DEBB81!important;
+      }
+      .van-icon{
+        font-size: 24px;
+        color: #DEBB81!important;
+      }
+    }
+  }
+  .content{
+    width: 100vw;
+    height: 100vh;
+    background: #2B2A28;
+    .logo{
+      width: 82px;
+      margin-left: 50%;
+      transform: translate(-50%);
+      margin-top: 107px;
+    }
+    .btn_apple,.btn_android{
+      width: 300px;
+      height: 57px;
+      margin: auto;
+      background: linear-gradient(180deg, #DEBB81 0%, #CFA35E 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      img{
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+      .text{
+        height: 22px;
+        font-size: 15px;
+        font-family: Roboto-Regular, Roboto;
+        font-weight: 400;
+        color: #2B2A28;
+        line-height: 22px;
+      }
+    }
+    .btn_apple{
+      margin-top: 110px;
+      margin-bottom: 22px;
+    }
+  }
+}

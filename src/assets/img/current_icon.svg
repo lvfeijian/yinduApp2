@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="47px" viewBox="0 0 48 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 4</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="62.8465889%" id="linearGradient-1">
+            <stop stop-color="#FFFCF7" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFF7E8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人中心备份" transform="translate(-245.000000, -829.000000)" fill="url(#linearGradient-1)">
+            <g id="编组-3" transform="translate(10.000000, 829.409605)">
+                <g id="编组-4" transform="translate(235.024288, 0.000000)">
+                    <polygon id="路径-4" points="22.9757124 23.3403952 28.1518732 -2.27373675e-13 18.8090458 -2.27373675e-13"></polygon>
+                    <polygon id="路径-4" transform="translate(29.384364, 13.403740) rotate(33.000000) translate(-29.384364, -13.403740) " points="28.879617 25.073938 34.0557778 1.73354279 24.7129503 1.73354279"></polygon>
+                    <polygon id="路径-4" transform="translate(33.413821, 18.053981) rotate(65.000000) translate(-33.413821, -18.053981) " points="32.9090736 29.7241788 38.0852343 6.38378359 28.7424069 6.38378359"></polygon>
+                    <polygon id="路径-4" transform="translate(34.289505, 24.144501) rotate(98.000000) translate(-34.289505, -24.144501) " points="33.7847582 35.814699 38.9609189 12.4743038 29.6180915 12.4743038"></polygon>
+                    <polygon id="路径-4" transform="translate(31.733394, 29.741604) rotate(131.000000) translate(-31.733394, -29.741604) " points="31.2286471 41.4118015 36.4048079 18.0714063 27.0619805 18.0714063"></polygon>
+                    <polygon id="路径-4" transform="translate(26.557035, 33.068248) rotate(164.000000) translate(-26.557035, -33.068248) " points="26.0522876 44.7384458 31.2284484 21.3980505 21.885621 21.3980505"></polygon>
+                    <polygon id="路径-4" transform="translate(20.403884, 33.068248) rotate(196.000000) translate(-20.403884, -33.068248) " points="19.8991372 44.7384458 25.075298 21.3980505 15.7324706 21.3980505"></polygon>
+                    <polygon id="路径-4" transform="translate(15.227525, 29.741604) rotate(229.000000) translate(-15.227525, -29.741604) " points="14.7227777 41.4118015 19.8989385 18.0714063 10.5561111 18.0714063"></polygon>
+                    <polygon id="路径-4" transform="translate(12.671414, 24.144501) rotate(262.000000) translate(-12.671414, -24.144501) " points="12.1666667 35.814699 17.3428274 12.4743038 8 12.4743038"></polygon>
+                    <polygon id="路径-4" transform="translate(13.547098, 18.053981) rotate(295.000000) translate(-13.547098, -18.053981) " points="13.0423513 29.7241788 18.218512 6.38378359 8.8756846 6.38378359"></polygon>
+                    <polygon id="路径-4" transform="translate(17.576555, 13.403740) rotate(327.000000) translate(-17.576555, -13.403740) " points="17.0718079 25.073938 22.2479686 1.73354279 12.9051412 1.73354279"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

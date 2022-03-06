@@ -1,0 +1,124 @@
+.task_enter{
+  width: 100vw;
+  padding-bottom:50px;
+  .task_bg{
+    width: 100vw;
+    height: 425px;
+    background: url('../../assets/img/taskEnter/background.png') 100% 100% no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    .start{
+      font-size: 14px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #FF7219;
+      text-shadow: 0px 1px 1px rgba(255, 114, 25, 0.59);
+      margin-top: 307px;
+      margin-left: 164px;
+      position: absolute;
+    }
+  }
+  .task_cont{
+    width: 375px;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: -20px;
+    position: relative;
+    .introduct{
+      width: 335px;
+      height: 131px;
+      background: #FFF9EF;
+      border-radius: 17px;
+      margin: auto;
+      box-sizing: border-box;
+      padding: 15px;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 30px;
+    }
+    .btn_list{
+      display: flex;
+      width: calc(100vw - 40px);
+      justify-content: space-between;
+      margin: auto;
+      margin-top: 27px;
+      margin-bottom: 20px;
+      .btn1{
+        width: 162px;
+        height: 44px;
+        line-height: 44px;
+        background: linear-gradient(180deg, #76CAFF 0%, #2363ED 100%);
+        border-radius: 47px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+      }
+      .btn2{
+        width: 162px;
+        height: 44px;
+        line-height: 44px;
+        background: linear-gradient(180deg, #FFD329 0%, #FB8323 100%);
+        border-radius: 47px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+    .line{
+      width: 375px;
+      height: 10px;
+      background: #F9F9F9;
+    }
+    .task_number{
+      display: flex;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      .item{
+        position: relative;
+        flex: 1;
+        text-align: center;
+        &:first-child{
+          &:after{
+            content: '';
+            width: 1px;
+            height: 26px;
+            color: #DADADA;
+            background-color: #DADADA;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+        .num{
+          color: #262626;
+          font-size: 20px;
+        }
+        .text{
+          color: #FC9A24;
+          font-size: 13px;
+        }
+      }
+    }
+    .task_intro{
+      margin-bottom: 40px;
+      .title{
+        margin-left: 20px;
+        color: #262626;
+        font-size: 18px;
+        height: 25px;
+        line-height: 25px;
+      }
+      .intro_text{
+        margin-left: 20px;
+        margin-right: 20px;
+        // color: #CCCCCC;
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 24px;
+      }
+    }
+  }
+}

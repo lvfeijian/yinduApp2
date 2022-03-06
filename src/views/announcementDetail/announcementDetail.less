@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.announcement_detail{
+  background: #F0F0F0;
+  min-height: 100vh;
+  .header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    margin-top: 0px;
+    z-index: 100;
+    /deep/.van-nav-bar{
+      background: #2B2A28;
+    }
+    /deep/.van-hairline--bottom::after {
+      border-bottom-width: 0px!important;
+    }
+    /deep/.van-nav-bar__content{
+      background: #2B2A28;
+      color: #DEBB81!important;
+      .van-nav-bar__title{
+        color: #DEBB81!important;
+      }
+      .van-icon{
+        font-size: 24px;
+        color: #DEBB81!important;
+      }
+    }
+  }
+  .list{
+    overflow: hidden;
+    width: calc(100vw - 34px);
+    margin: auto;
+    margin-top: 61px;
+    .item{
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      .name{
+        font-size: 15px;
+        font-family: Roboto-Regular, Roboto;
+        font-weight: 400;
+        color: #2B2A28;
+        margin-left: 10px;
+        margin-top: 14px;
+      }
+      .intro{
+        font-size: 13px;
+        font-family: Roboto-Regular, Roboto;
+        font-weight: 400;
+        color: #888888;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 9px;
+      }
+      .time{
+        height: 15px;
+        font-size: 10px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #888888;
+        line-height: 15px;
+        text-align: right;
+        margin-right: 10px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

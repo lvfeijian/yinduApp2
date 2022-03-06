@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/deep/.van-nav-bar{
+	background-color:#2B2A28 ;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	
+}
+/deep/.van-nav-bar .van-icon{
+	color: #DEBB81;
+	font-size: 24px;
+}
+/deep/.van-nav-bar__title{
+	color:  #DEBB81;
+}
+/deep/.van-nav-bar{
+	background: #2B2A28;
+}
+/deep/.van-hairline--bottom::after {
+	border-bottom-width: 0px!important;
+}
+.member{
+	min-height: 100vh;
+	background-color: #2B2A28;
+	overflow: hidden;
+}
+.member-container{
+	padding:0px 17px 0 17px;
+	margin-top: 45px;
+	
+	.member-score{
+		width: calc(100vm - 34px);
+		height: 104px;
+		position: relative;
+		margin-top: 46px;
+		// border: 0.5px dashed #FFFFFF;
+		
+		img{
+			width: 100%;
+			height: 95px;
+			border-bottom-right-radius: 50%;
+			border-bottom-left-radius: 50%;
+		}
+		
+		.member-title{
+			text-align: center;
+			margin-top: -60px;
+			height: 20px;
+			font-size: 15px;
+			font-family: Roboto-Regular, Roboto;
+			font-weight: 400;
+			color: #2B2A28;
+			line-height: 20px;
+		}
+	}
+	.score-item{
+		padding: 13px 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		
+		img{
+			width: 21px;
+			height: 17px;
+			margin-left: 2px;
+			margin-right: 13px;
+		}
+	
+		.score-title{
+			width: 74px;
+			height: 17px;
+			flex: 1;
+			font-size: 15px;
+			font-family: Roboto-Bold, Roboto;
+			font-weight: bold;
+			color: #DEBB81;
+			line-height: 17px;
+		}
+		.score-btn{
+			width:100px;
+			border-radius: 34px;
+			border: 1px solid #DEBB81;
+			height: 25px;
+			font-size: 15px;
+			font-family: PingFangSC-Semibold, PingFang SC;
+			font-weight: 600;
+			color: #DEBB81 ;
+			background-color: #2B2A28;
+			line-height: 23px;
+			text-align: center;
+			&.active{
+				background-color: #DEBB81;
+				color: #2B2A28;
+			}
+		}
+	}
+	
+	.pay-btn{
+		width: 342px;
+		height: 42px;
+		border-radius: 21px;
+		border: 1px solid #DEBB81;
+		margin-top: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 50px;
+		font-size: 17px;
+		color: #DEBB81;
+
+		&.active{
+			background-color: #DEBB81;
+			color: #2B2A28;
+		}
+	}
+	
+	.pay-title:hover{
+		color: #2B2A28;
+	}
+}
+// 弹窗样式修改
+/deep/.van-popup{
+	background-color: #DEBB81;
+}
+.pay-box{
+	// display: flex;
+	// flex-direction: column;
+	padding: 11px 17px;
+	position: relative;
+	height: 100%;
+	
+	.pay-title{
+		margin: 31px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 25px;
+		font-size: 19px;
+		font-family: Roboto-Regular, Roboto;
+		font-weight: 400;
+		color: #2B2A28;
+		line-height: 25px;
+	}
+	.pay-container{
+		display: flex;
+		align-items: center;
+		.wallet{
+			width: 19px;
+			height: 16px;
+			border: 1px dashed #D8D8D8;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 10px;
+			
+			img{
+				width: 17px;
+				height: 14px;
+				
+			}
+		}
+		
+		.small-title{
+			flex:1;
+			height: 21px;
+			font-size: 15px;
+			font-family: PingFangSC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #2B2A28;
+			line-height: 21px;
+		}
+		
+		.pay-check{
+			width: 21px;
+			height: 21px;
+			border-radius: 10px;
+			border: 1px solid #2B2A28;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.pay-btntwo{
+		position: absolute;
+		bottom: 5%;
+		width: 342px;
+		height: 42px;
+		border-radius: 21px;
+		border: 1px solid #2B2A28;
+		line-height: 42px;
+		text-align: center;
+		&.active{
+			background-color: #2B2A28;
+			color:#DEBB81  ;
+		}
+	}
+	
+}

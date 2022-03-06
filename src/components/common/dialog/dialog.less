@@ -1,0 +1,55 @@
+.dialog{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(43, 42, 40, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .dialog_cont{
+    width: 264px;
+    height: 246px;
+    background: #FFFFFF;
+    border-radius: 19px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .close{
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    .logo{
+      img{
+        margin-top: 24px;
+        width: 65px;
+        height: 65px;
+      }
+    }
+    .text{
+      flex: 1;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      line-height: 22px;
+      font-size: 17px;
+    }
+    .btn{
+      width: 196px;
+      height: 28px;
+      line-height: 28px;
+      background: linear-gradient(180deg, #DEBB81 0%, #CFA35E 100%);
+      border-radius: 19px;
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 15px;
+      color: #2B2A28;
+    }
+  }
+}

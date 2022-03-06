@@ -1,0 +1,42 @@
+/* @import './normalize.css'; */
+*{
+  margin: 0;
+  padding: 0;
+}
+input{
+  border: none;
+  outline: none;
+  /* 按钮框无单击外框属性 */
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  /* 去掉下划线 */
+  cursor: pointer;
+  /* 变小手状 */
+}
+body{
+  background-color: #f5f5f5;
+  overflow-x: hidden!important;
+  font-family: Helvetica;
+}
+html{
+  overflow-x: hidden;
+}
+body *{
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+}
+a,input,button{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input,button,textarea{
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: medium;
+  background-color: transparent;
+}

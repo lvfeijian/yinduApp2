@@ -1,0 +1,166 @@
+.profit{
+  background: #fff;
+  min-height: 100vh;
+  .profit_title{
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 500;
+    color: #262626;
+    text-align: center;
+    background-color: #fff;
+  }
+  .profit_cont{
+    width: 355px;
+    height: 167px;
+    background: url('../../assets/img/profit/2.png') no-repeat 100% 100%;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+    margin: auto;
+    .total{
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 22px;
+      .money{
+        height: 32px;
+        line-height: 30px;
+        font-size: 24px;
+      }
+    }
+    .income{
+      display: flex;
+      
+      .item{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        position: relative;
+        &:nth-child(1){
+          &:after{
+            position: absolute;
+            right: 0;
+            content: '';
+            width: 1px;
+            height: 28px;
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+        }
+        .money{
+          font-size: 18px;
+          height: 26px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+  .balance_cont{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    .balance{
+      margin-left: 20px;
+      .title{
+        font-size: 12px;
+        color: #262626;
+      }
+      .money{
+        color: #262626;
+        font-size: 20px;
+        font-weight: bold;
+        span{
+          font-size: 14px;
+        }
+      }
+    }
+    .btn{
+      width: 97px;
+      height: 35px;
+      line-height: 35px;
+      background: linear-gradient(180deg, #FFD329 0%, #FB8323 100%);
+      border-radius: 47px;
+      text-align: center;
+      margin-right: 10px;
+      color: #fff;
+    }
+  }
+  .list_cont{
+    background-color: #f9f9f9;
+    overflow: hidden;
+    .today{
+      width: 355px;
+      height: 77px;
+      background: #FFFFFF;
+      box-shadow: inset 0px 2px 11px 0px rgba(178, 178, 178, 0.5);
+      border-radius: 8px;
+      margin: auto;
+      text-align: center;
+      margin-top: 11px;
+      overflow: hidden;
+      .title{
+        height: 20px;
+        font-size: 14px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #262626;
+        line-height: 20px;
+        margin-top: 18px;
+      }
+      .money{
+        height: 28px;
+        font-size: 20px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #262626;
+        line-height: 28px;
+      }
+    }
+  }
+  .list{
+    width: calc(100vw - 34px);
+    background: #FFFFFF;
+    border-radius: 8px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+      span{
+        display: inline-block;
+        margin: 0 10px;
+        width: 3px;
+        height: 15px;
+        background: #DEBB81;
+      }
+    .item{
+      width: calc(100% - 20px);
+      margin: auto;
+      border-bottom: 1px solid #eee;
+      overflow: hidden;
+      .cont{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        .vip{
+          width: 260px;
+          font-size: 17px;
+          color: #333333;
+        }
+        .price{
+          font-size: 17px;
+        }
+      }
+      .hour{
+        margin-top: 5px;
+        color: #999999;
+        font-size: 13px;
+        height: 18px;
+        margin-bottom: 12px;
+      }
+
+    }
+  }
+}

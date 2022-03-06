@@ -1,0 +1,117 @@
+.wallet{
+  background: #F0F0F0;
+  overflow: hidden;
+  min-height: 100vh;
+  .header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    margin-top: 0px;
+    z-index: 100;
+    /deep/.van-nav-bar{
+      background: #2B2A28;
+    }
+    /deep/.van-hairline--bottom::after {
+      border-bottom-width: 0px!important;
+    }
+    /deep/.van-nav-bar__content{
+      background: #2B2A28;
+      color: #DEBB81!important;
+      .van-nav-bar__title{
+        color: #DEBB81!important;
+      }
+      .van-icon{
+        font-size: 24px;
+        color: #DEBB81!important;
+      }
+    }
+  }
+  .account{
+    width: 375px;
+    height: 205px;
+    background: #2B2A28;
+    border-radius: 1px;
+    margin-top: 45px;
+    overflow: hidden;
+    .text{
+      margin-top: 42px;
+      text-align: center;
+      height: 25px;
+      font-size: 19px;
+      font-weight: 400;
+      color: #DEBB81;
+      line-height: 25px;
+    }
+    .price{
+      text-align: center;
+      margin-top: 16px;
+      height: 52px;
+      font-size: 38px;
+      font-family: PingFangSC-Semibold, PingFang SC;
+      font-weight: 600;
+      color: #DEBB81;
+      line-height: 52px;
+    }
+  }
+  .card{
+    width: 342px;
+    height: 205px;
+    background: #FFFDFD;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: -30px;
+    overflow: hidden;
+    .tips{
+      height: 18px;
+      font-size: 13px;
+      font-family: Roboto-Regular, Roboto;
+      font-weight: 400;
+      color: #ADADAD;
+      line-height: 17px;
+      margin-left: 10px;
+      margin-top: 16px;
+    }
+    .withdraw{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: calc(100% - 20px);
+      margin: auto;
+      margin-top: 16px;
+      height: 52px;
+      .sign{
+        font-size: 38px;
+      }
+      .ipt{
+        flex: 1;
+        font-size: 20px;
+      }
+      .withdraw_all{
+        color: #DEBB81;
+        font-size: 15px;
+      }
+    }
+    .btn{
+      width: 309px;
+      height: 42px;
+      line-height: 42px;
+      background: linear-gradient(180deg, #DEBB81 0%, #CFA35E 100%);
+      border-radius: 21px;
+      text-align: center;
+      color: #2B2A28;
+      margin: auto;
+      margin-top: 36px;
+    }
+  }
+  .rule_text{
+    margin: auto;
+    width: 342px;
+    font-size: 13px;
+    font-family: Roboto-Regular, Roboto;
+    font-weight: 400;
+    color: #ADADAD;
+    line-height: 17px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}

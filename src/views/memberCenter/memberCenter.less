@@ -1,0 +1,126 @@
+.member_center{
+  width: 100vw;
+  position: relative;
+  .header{
+    background: url('../../assets/img/memberCenter/header.png') 100% 100% no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    overflow: hidden;
+    .header_text{
+      width: 129px;
+      height: 112px;
+      font-size: 20px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 28px;
+      margin-top: 47px;
+      margin-left: 18px;
+    }
+  }
+  section{
+    margin: 18px 10px 20px;
+    width: 355px;
+    height: 102px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 13px 0px rgba(203, 203, 203, 0.5);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    .left_text{
+      margin-left: 30px;
+      flex: 1;
+      .text{
+        color: #FB8A24;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .text2{
+        font-size: 14px;
+        color: #A2A2A2;
+        line-height: 20px;
+        margin-top: 4px;
+      }
+    }
+    .img{
+      width: 50px;
+      margin-right: 20px;
+    }
+  }
+  .balance{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    .total{
+      color: #212121;
+      font-size: 18px;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      span{
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+    .btn{
+      margin-right: 20px;
+      width: 85px;
+      height: 35px;
+      line-height: 35px;
+      background: linear-gradient(180deg, #FFD329 0%, #FB8323 100%);
+      border-radius: 47px;
+      font-size: 16px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  .title{
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #262626;
+    line-height: 25px;
+  }
+  .member_list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .item{
+      width: 110px;
+      height: 110px;
+      background: linear-gradient(180deg, #FFFDEF 0%, #FFF9DB 100%);
+      box-shadow: inset 0px 8px 26px 0px rgba(252, 218, 37, 0.23);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 10px;
+      &.active{
+        background: linear-gradient(180deg, #EAEAEA 0%, #AFAFAF 100%);
+        box-shadow: inset 0px 8px 26px 0px rgba(83, 83, 83, 0.23);
+        .money{
+          color: #9F9F9F;
+        }
+      }
+      &.current{
+        background: linear-gradient(180deg, #FFFDEF 0%, #FFF9DB 100%);
+        box-shadow: 0px 0px 17px 0px rgba(201, 128, 3, 0.46), inset 0px 6px 26px 0px rgba(252, 218, 37, 0.23);
+      }
+      img{
+        width: 50px;
+        height: 50px;
+      }
+      .money{
+        color: #F49413;
+        font-size: 18px;
+        margin-top: 4px;
+      }
+    }
+  }
+}

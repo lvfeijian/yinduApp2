@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.purchase{
+  width: 100vw;
+  background: #F0F0F0;
+  min-height: 100vh;
+  .header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    margin-top: 0px;
+    z-index: 100;
+    /deep/.van-nav-bar__content{
+      background: #2B2A28;
+      color: #DEBB81!important;
+      .van-nav-bar__title{
+        color: #DEBB81!important;
+      }
+      .van-icon{
+        font-size: 24px;
+        color: #DEBB81!important;
+      }
+    }
+  }
+  .empty{
+    height: 56px;
+  }
+  .list{
+    width: calc(100vw - 34px);
+    background: #FFFFFF;
+    border-radius: 8px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    .title{
+      font-size: 16px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      span{
+        display: inline-block;
+        margin: 0 10px;
+        width: 3px;
+        height: 15px;
+        background: #DEBB81;
+      }
+    }
+    .item{
+      height: 107px;
+      width: calc(100% - 20px);
+      margin: auto;
+      border-bottom: 1px solid #eee;
+      overflow: hidden;
+      .cont{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        .vip{
+          font-size: 17px;
+          color: #333333;
+        }
+        .price{
+          font-size: 17px;
+          color: #DEBB81;
+        }
+      }
+      .hour,.level{
+        margin-top: 10px;
+        color: #999999;
+        font-size: 13px;
+        height: 18px;
+      }
+
+    }
+  }
+  .empty2{
+    height: 10px;
+  }
+  
+}
