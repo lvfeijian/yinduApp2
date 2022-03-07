@@ -52,14 +52,21 @@ export function userTeam(data){
 }
 
 // 广告收益
-export function taskEaningsApi(params){
+export function taskEaningsApi(data){
     return request({
         url: 'api/task/eanings',
-        method: 'get',
-        params
+        method: 'post',
+        data
     })
 }
-
+// 团队收益
+export function TeamProfitApi(data){
+    return request({
+        url: 'api/user/retail',
+        method: 'post',
+        data
+    })
+}
 // 提现接口
 export function userCashApi(data){
     return request({
@@ -84,7 +91,13 @@ export function downloadApi(){
         method: 'post',
     })
 }
-
+// 用户签到
+export function userReportApi(){
+    return request({
+        url: 'api/user/report',
+        method: 'post',
+    })
+}
 
 
 

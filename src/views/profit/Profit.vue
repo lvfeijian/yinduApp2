@@ -12,11 +12,11 @@
       <div class="income">
         <div class="item">
           {{$t('income.advertising_revenue')}}
-          <p class="money">${{userInfo.retail_earnings}}</p>
+          <p class="money">${{userInfo.task_earnings}}</p>
         </div>
         <div class="item">
           {{$t('income.team_income')}}
-          <p class="money">${{userInfo.task_earnings}}</p>
+          <p class="money">${{userInfo.retail_earnings}}</p>
         </div>
       </div>
     </div>
@@ -33,7 +33,9 @@
         <div class="money" v-if="userInfo">${{userInfo.today_money}}</div>
       </div>
     </div>
+    <div class="navbar"></div>
     <div class="list">
+
       <van-list
         v-model="loading"
         :finished="finished"
@@ -49,6 +51,26 @@
           <div class="hour">{{item.create_time}}</div>
         </div>
       </van-list>
+      <!-- <van-list
+          v-model="loading"
+          :finished="finished"
+          finished-text="no more"
+          @load="onLoad"
+          loading-text="loading..."
+        >
+          <div class="table_item" v-for="(item,index) in teamList" :key="index">
+            <div class="level">
+              {{item.vip_level}}
+            </div>
+            <div class="number">
+              {{item.account.replace(item.account.substring(3,7), "****")}}
+            </div>
+            <div class="name">
+              {{item.name || item.account.replace(item.account.substring(3,7), "****")}}
+            </div>
+          </div>
+        </van-list> -->
+      
     </div>
 
   </div>
@@ -61,6 +83,7 @@ Vue.use(List);
 Vue.use(NavBar);
 import {
   taskEaningsApi,
+  TeamProfitApi,
   getUserInfo
 } from '@/network/mine'
   export default {

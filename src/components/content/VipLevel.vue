@@ -9,6 +9,9 @@
 </template>
 
 <script>
+  import {
+    getUserInfo
+  } from '@/network/mine'
   export default {
     data() {
       return {
@@ -21,12 +24,16 @@
 
     computed: {},
     created(){
-      this.userInfo = JSON.parse(localStorage.getItem('userInfo'))
-      if(this.userInfo.is_vip == 1){
-        this.vip_level = this.userInfo.vip_level.replace('VIP','')
-      } else {
-        this.vip_level = null
-      }
+      getUserInfo().then(res => {
+        if (res.code == 1) {
+          this.userInfo = res.data
+          if(this.userInfo.is_vip == 1){
+            this.vip_level = this.userInfo.vip_level.replace('VIP','')
+          } else {
+            this.vip_level = null
+          }
+        }
+      })
     },
     mounted() {
     },

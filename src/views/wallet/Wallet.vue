@@ -1,13 +1,14 @@
 <!-- 钱包 -->
 <template>
   <div class="wallet">
-    <div class="header">
+    <!-- <div class="header">
       <van-nav-bar
         title="WALLET"
         left-arrow
         @click-left="onClickLeft"
       />
-    </div>
+    </div> -->
+    <img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
     <div class="account">
       <div class="text">ACCOUNT BALANCE</div>
       <div class="price">₹{{balance}}</div>
@@ -70,9 +71,9 @@ import {
     },
 
     methods: {
-      onClickLeft(){
-        this.$router.go(-1)
-      },
+      goBack: function() {
+				this.$router.go(-1)
+			},
       handleWithdrawAll(){
         this.money = this.balance
       },

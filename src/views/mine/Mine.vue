@@ -34,6 +34,11 @@
       </div>
     </div>
     <div class="list">
+      <div class="list_item" @click="golink('announcement')">
+        <img class="icon" src="../../assets/img/mine/6.png" alt="" />
+        <div class="list_name">活动中心</div>
+        <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
+      </div>
       <div class="list_item" @click="golink('invite')">
         <img class="icon" src="../../assets/img/mine/1.png" alt="" />
         <div class="list_name">{{$t('my.invite_friend')}}</div>
@@ -64,12 +69,8 @@
         <div class="list_name">{{$t('my.platform_intro')}}</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
       </div>
-      <!-- <div class="list_item" @click="golink('modifyPassword')">
-        <img class="icon" src="../../assets/img/mine/xiugaimima.png" alt="" />
-        <div class="list_name">CHANGE PASSWORD</div>
-        <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
-      </div>
-      <div class="list_item" @click="golink('bankCard')">
+      
+      <!-- <div class="list_item" @click="golink('bankCard')">
         <img class="icon" src="../../assets/img/mine/yinhangqia.png" alt="" />
         <div class="list_name">BANK CARD</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />

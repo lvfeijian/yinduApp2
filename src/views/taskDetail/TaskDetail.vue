@@ -1,32 +1,36 @@
 <!-- Home -->
 <template>
-	<div class="task_detail" v-if="videoInfo" :class="videoInfo.type == 0 ? 'active' : ''">
-		<div class="header">
+	<div class="task_detail" v-if="videoInfo">
+		<!-- <div class="header">
       <van-nav-bar
         :title="videoInfo && videoInfo.title"
         left-arrow
         @click-left="onClickLeft"
       />
-    </div>
+		</div> -->
+    <img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
+		
 		<div v-if="videoInfo">
 
-			<div class="video" v-if="videoInfo.type == 1">
-				<video ref="video" controls="controls" :src="videoInfo.video_url"></video>
+			<div class="video">
+				<video ref="video" controls="controls" >
+					<source :src="videoInfo.video_url">
+				</video>
 			</div>
-			<div class="free-bg" v-if="videoInfo.type == 0">
+			<!-- <div class="free-bg">
 				<img class="img-box" src="../../assets/img/home/free.png" alt="">
 				<div class="container-box">
 					<div class="container-title">{{videoInfo.title}}</div>
 					<div class="container-text" v-html="videoInfo.content"></div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
-		<Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" :type="type" :btnText="btnText">
+		<!-- <Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" :type="type" :btnText="btnText">
       <div v-html="message" style="font-size: 16px;text-align: left"></div>
-    </Dialog>
+    </Dialog> -->
 		<div class="count_down" v-if="isShowCountDown">
-			Gain rewards after watching for {{videoInfo.view_time}} seconds
+			剩余{{videoInfo.view_time}}秒完成广告分发，获得奖励
 		</div>
 	</div>
 </template>
@@ -64,6 +68,8 @@
 
 		computed: {},
 		created(){
+			console.log(this.$route.query.id);
+			
 			this.id = this.$route.query.id
 			this.getTaskDetail()
 		},
@@ -71,14 +77,35 @@
 		},
 		
 		methods: {
+			goBack: function() {
+				this.$router.go(-1)
+			},
 			getTaskDetail(){
 				taskDetailApi({
 					id: this.id
 				}).then(res => {
 					if(res.code == 1){
 						this.videoInfo = res.data
+						setTimeout(() => {
+							this.$refs.video.play()
+						}, 800);
+						this.isShowCountDown = true
+						this.timer = setInterval(() => {
+							this.videoInfo.view_time--
+							if(this.videoInfo.view_time <= 0){
+								clearInterval(this.timer)
+								this.isShowCountDown = false
+								taskFinishApi({
+									id: this.videoInfo.id,
+									auth_code: this.videoInfo.auth_code
+								}).then(res => {
+									if(res.code == 1){
+										Notify({ type: 'success', message: '成功投放广告，获得收益' });
+									}
+								})
+							}
+						}, 1000);
 						if(res.data && res.data.vip_type == 1 && res.data.is_vip == 1 && res.data.is_finish==0){
-							this.isShowDialog = true
 						}
 					}
 				})
@@ -95,21 +122,7 @@
 				}
 				this.isShowDialog = false
 				this.isShowCountDown = true
-				this.timer = setInterval(() => {
-					this.videoInfo.view_time--
-					if(this.videoInfo.view_time <= 0){
-						clearInterval(this.timer)
-						this.isShowCountDown = false
-						taskFinishApi({
-							id: this.videoInfo.id,
-							auth_code: this.videoInfo.auth_code
-						}).then(res => {
-							if(res.code == 1){
-								Notify({ type: 'success', message: 'Mission accomplished' });
-							}
-						})
-					}
-				}, 1000);
+				
 			}
 		}
 	}

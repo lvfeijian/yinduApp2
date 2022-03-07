@@ -8,6 +8,7 @@
         @click-left="onClickLeft"
       />
     </div>
+    <div class="sign_in" @click="signIn">签到</div>
     <div style="height:0px;">&nbsp;</div>
     <div class="list">
       <van-list
@@ -29,11 +30,14 @@
 
 <script>
 import Vue from 'vue';
-import { NavBar, List } from 'vant';
-Vue.use(NavBar).use(List)
+import { NavBar, List,Toast } from 'vant';
+Vue.use(NavBar).use(List).use(Toast)
 import {
   noticeListApi
 } from '@/network/home'
+import {
+  userReportApi
+} from '@/network/mine'
   export default {
     data() {
       return {
@@ -51,6 +55,14 @@ import {
     mounted() {},
 
     methods: {
+      // 签到
+      signIn(){
+        userReportApi().then(res => {
+          if(res.code == 1){
+            Toast('签到成功')
+          }
+        })
+      },
       onClickLeft(){
         this.$router.push({
           path: 'mine'

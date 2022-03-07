@@ -20,6 +20,9 @@
 	import {
 		getTaskList
 	} from '@/network/task'
+	import {
+    getUserInfo,
+  } from '@/network/mine'
 	import Dialog from '@/components/common/dialog/Dialog'
 	import {
 		NavBar,
@@ -43,10 +46,14 @@
 		computed: {},
 
 		mounted() {
-			userInfo = JSON.parse(localStorage.getItem('userInfo'))
-			if(userInfo.user_status==0){
-				return this.isShowDialog = true
-			}
+			getUserInfo().then(res => {
+        if (res.code == 1) {
+					if(res.data.user_status==0){
+						return this.isShowDialog = true
+					}
+        }
+      })
+			
 			// 获取任务中心数据
 			getTaskList().then(res => {
 				if(res.code == 1){

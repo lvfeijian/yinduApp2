@@ -26,5 +26,14 @@ export function taskFinishApi(data){
     })
 }
 
+// 随机获取vip任务接口
+export function randVipTaskApi(params){
+    return request({
+        url: 'api/task/randVip',
+        method: 'get',
+        params
+    })
+}
+
 
 

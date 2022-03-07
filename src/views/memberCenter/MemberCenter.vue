@@ -18,7 +18,7 @@
     </div>
     <div class="title">{{$t('memberCenter.member_intro')}}</div>
     <div class="member_list">
-      <div class="item" v-for="(item,index) in vipListData" :class="vip_level == index+1 ? 'current': vip_level<index+1 ? 'active' : ''">
+      <div class="item" v-for="(item,index) in vipListData.slice(0,9)" :class="vip_level == index+1 ? 'current': vip_level<index+1 ? 'active' : ''">
         <img :src='"../../assets/img/memberCenter/" + Number(index+1) + (vip_level<index+1 ? "-1": "") +".png"' alt="" />
         <p class="money">${{item.satisfy.split('.')[0]}}</p>
       </div>
@@ -31,6 +31,9 @@
   import {
     vipListApi
   } from '@/network/memberCenter'
+  import {
+    getUserInfo
+  } from '@/network/mine'
   import VipLevel from '@/components/content/VipLevel.vue'
   export default {
     data() {
@@ -45,12 +48,16 @@
     },
     computed: {},
     created(){
-      this.userInfo = JSON.parse(localStorage.getItem('userInfo'))
-      if(this.userInfo.is_vip == 1){
-        this.vip_level = this.userInfo.vip_level.replace('VIP','')
-      } else {
-        this.vip_level = null
-      }
+      getUserInfo().then(res => {
+        if (res.code == 1) {
+          this.userInfo = res.data
+          if(this.userInfo.is_vip == 1){
+            this.vip_level = this.userInfo.vip_level.replace('VIP','')
+          } else {
+            this.vip_level = null
+          }
+        }
+      })
     },
     mounted() {
       this.getVipList()
