@@ -121,6 +121,31 @@
       }
     }
   }
+  .navbar{
+    display: flex;
+    margin-top: 10px;
+    .item{
+      margin-left: 15px;
+      color: #ccc;
+      height: 20px;
+      line-height: 20px;
+      &.active{
+        color: #4472FF;
+        position: relative;
+        &:after{
+          width: 34px;
+          height: 3px;
+          background: #4472FF;
+          border-radius: 2px;
+          content: '';
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -5px;
+        }
+      }
+    }
+  }
   .list{
     width: calc(100vw - 34px);
     background: #FFFFFF;
@@ -128,6 +153,7 @@
     height: auto;
     margin: auto;
     overflow: hidden;
+    margin-bottom: 44px;
       span{
         display: inline-block;
         margin: 0 10px;

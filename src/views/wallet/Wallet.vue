@@ -11,12 +11,12 @@
     <img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
     <div class="account">
       <div class="text">ACCOUNT BALANCE</div>
-      <div class="price">₹{{balance}}</div>
+      <div class="price">${{total_amount}}</div>
     </div>
     <div class="card">
-      <div class="tips">AVAILABLE CASH AMOUNT：₹{{balance}}</div>
+      <div class="tips">AVAILABLE CASH AMOUNT：${{balance}}</div>
       <div class="withdraw">
-        <div class="sign">₹</div>
+        <div class="sign">$</div>
         <van-field class="ipt" v-model="money" type="number" placeholder="" />
         <div class="withdraw_all" @click="handleWithdrawAll">WITHDRAW ALL</div>
       </div>
@@ -26,7 +26,7 @@
       Withdrawal rules of JCD wallet:<br/>
       1. Monday to Saturday, 10:00-16:00 every day, withdrawals outside this time period will be postponed to the next day. The withdrawal application on Sunday will be postponed to the next Monday.<br/>
       2. Due to the withdrawal restrictions of the banking system, each withdrawal needs to be greater than 500 rupees.<br/>
-      3. Withdrawal fee: ₹10 + 5% of the withdrawal amount
+      3. Withdrawal fee: $$$10 + 5% of the withdrawal amount
       <br/>
       <br/>
       Rewards for false registration accounts will be deducted and the account will be frozen
@@ -46,12 +46,14 @@ Vue.use(Toast);
 import Dialog from '@/components/common/dialog/Dialog'
 
 import {
-  userCashApi
+  userCashApi,
+  getUserInfo
 } from '@/network/mine'
   export default {
     data() {
       return {
         balance: 0,
+        total_amount: 0,
         money: '',
         isShowDialog: false,
         type: 1,
@@ -65,7 +67,15 @@ import {
 
     computed: {},
     created(){
-      this.balance = this.$route.query.balance || 0
+      getUserInfo().then(res => {
+				if(res.code == 1){
+          this.userInfo = res.data
+          this.balance = this.userInfo.balance || 0
+          this.total_amount = this.userInfo.total_amount
+          console.log(this.userInfo.balance,this.userInfo.total_amount);
+          
+        }
+      })
     },
     mounted() { 
     },

@@ -28,7 +28,7 @@
 			<div class="bottom">
 				<div class="saldo" @click="golink('memberCenter')">
 					<p>{{$t('home.total_balance')}}</p>
-					<span>${{userInfo.balance}}</span>
+					<span>${{userInfo.total_amount}}</span>
 				</div>
 				<div class="tasks"  @click="golink('taskEnter')">
 					<p>{{$t('home.task_number')}}</p>

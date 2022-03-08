@@ -39,13 +39,14 @@
 			<div>YOU ARE NOT <br>
 				YET A VIP</div>
     </Dialog>
-    <Dialog @close="doClose" @handleBtn="handleBtn2" :isShow="isShowDialog2" btnText="TO FINISH">
+    <Dialog @close="doClose2" @handleBtn="handleBtn2" :isShow="isShowDialog2" btnText="TO FINISH">
       <div v-html="message" style="font-size: 16px;text-align: left"></div>
     </Dialog>
   </div>
 </template>
 
 <script>
+  import Vue from 'vue'
   import {
     getCompanyIntro
   } from '@/network/introduct'
@@ -56,6 +57,8 @@
   import {
     getUserInfo,
   } from '@/network/mine'
+  import { Notify } from 'vant';
+  Vue.use(Notify);
   import Dialog from '@/components/common/dialog/Dialog'
   const next =
     window.requestAnimationFrame ||
@@ -132,6 +135,9 @@
       doClose(){
 				this.isShowDialog = false
 			},
+      doClose2(){
+        this.isShowDialog2 = false
+      },
 			handleBtn(){
 				this.isShowDialog = false
 				this.$router.push('/member')
@@ -224,14 +230,19 @@
 
             opt.isFinished = true;
               if(this.userInfo.vip_surplus > 0 && this.userInfo.is_vip == 1){
-                // 会员
-                pos = -800
+                // 会员 去做任务
+                pos = -80*this.fontSize
+                
                 setTimeout(() => {
                   this.isShowDialog2 =true
                 }, 2200);
+              } else if(this.userInfo.vip_surplus == 0 && this.userInfo.is_vip == 1){
+                // 会员 任务次数使用完毕
+                Notify({ type: 'danger', message: '每日任务次数已用完' });
+                pos = 0 + this.fontSize
               } else {
                 // 普通用户
-                pos = 0
+                pos = 0 + this.fontSize
                 this.isShowDialog = true
               }
 

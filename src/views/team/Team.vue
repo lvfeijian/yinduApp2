@@ -20,9 +20,9 @@
     </div>
     <div class="table">
       <div class="table_header">
-        <div class="header_item">VIP LEVEL</div>
+        <div class="header_item">ID</div>
         <div class="header_item">ACCOUNT</div>
-        <div class="header_item name">NAME</div>
+        <div class="header_item name">TIME</div>
       </div>
       <div class="table_body">
         <van-list
@@ -34,13 +34,13 @@
         >
           <div class="table_item" v-for="(item,index) in teamList" :key="index">
             <div class="level">
-              {{item.vip_level}}
+              {{item.id}}
             </div>
             <div class="number">
-              {{item.account.replace(item.account.substring(3,7), "****")}}
+              {{item.account.replace(item.account.substring(3,6), "***")}}
             </div>
             <div class="name">
-              {{item.name || item.account.replace(item.account.substring(3,7), "****")}}
+              {{getTime(item.time)}}
             </div>
           </div>
         </van-list>
@@ -73,7 +73,9 @@ import {
 
     components: {},
 
-    computed: {},
+    computed: {
+      
+    },
     created() {
       this.direct_push = this.$route.query.direct_push
       this.total_people = this.$route.query.total_people
@@ -81,6 +83,14 @@ import {
     mounted() { },
 
     methods: {
+      getTime(time){
+        let month = time.split(' ')[0].split('-')[1]
+        let day = time.split(' ')[0].split('-')[2]
+        let hour = time.split(' ')[1].split(':')[0]
+        let minute = time.split(' ')[1].split(':')[1]
+        return month+ '/' + day + '/' + hour + ':' + minute
+        
+      },
       onClickLeft(){
         this.$router.go(-1)
       },
@@ -90,12 +100,12 @@ import {
           limit: 20
         }).then(res => {
           if(res.code == 1){
-            this.teamList.push(...res.data)
+            this.teamList.push(...res.data.list)
             
             this.page+=1
             this.loading = false;
             // 数据全部加载完成
-            if (res.data.length < 20) {
+            if (res.data.list.length < 20) {
               this.finished = true;
             }
           }

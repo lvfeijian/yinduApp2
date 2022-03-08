@@ -13,8 +13,8 @@
       <img class="img" src="../../assets/img/memberCenter/7.png" alt="" />
     </section>
     <div class="balance">
-      <div class="total">{{$t('memberCenter.overall_balance')}}：<span>{{userInfo.balance}}</span></div>
-      <div class="btn">{{$t('memberCenter.recharge')}}</div>
+      <div class="total">{{$t('memberCenter.overall_balance')}}：<span>{{userInfo.total_amount}}</span></div>
+      <div class="btn" @click="golink('recharge')">{{$t('memberCenter.recharge')}}</div>
     </div>
     <div class="title">{{$t('memberCenter.member_intro')}}</div>
     <div class="member_list">
@@ -63,6 +63,9 @@
       this.getVipList()
     },
     methods: {
+      golink(url){
+        this.$router.push(url)
+      },
       goBack: function() {
 				this.$router.go(-1)
 			},

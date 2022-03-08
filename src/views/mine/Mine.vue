@@ -19,9 +19,9 @@
       <div class="text">
         <img v-if="vip_level" :src='"../../assets/img/memberCenter/" + vip_level + ".png"' alt="" />
         <img v-else src="../../assets/img/memberCenter/1-1.png" alt="" />
-        <p>{{$t('my.total_amount')}}</p>
+        <p>{{$t('my.available_balance')}}</p>
       </div>
-      <div class="money" v-if="userInfo">${{userInfo.recharge}}</div>
+      <div class="money" v-if="userInfo">${{userInfo.total_amount}}</div>
     </div>
     <div class="available_balance" v-if="userInfo">
       <p>{{$t('my.available_balance')}}：${{userInfo.balance}}</p >
@@ -162,9 +162,9 @@
           }
         }
         if(url == 'wallet'){
-          path.query = {
-            balance: this.userInfo.balance
-          }
+          // path.query = {
+          //   balance: this.userInfo.balance
+          // }
         }
         if(url == 'bankCard'){
           // 是null或者是数组都跳转到backCrad

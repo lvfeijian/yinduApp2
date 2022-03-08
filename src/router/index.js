@@ -160,6 +160,11 @@ const routes = [
             TabbarShow: true,
         },
     },
+    {
+	    path: '/recharge',
+	    name: 'Recharge',
+        component: () => import( '../views/recharge/Recharge')
+    },
     
    
 ]

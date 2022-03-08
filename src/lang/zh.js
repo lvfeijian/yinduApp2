@@ -16,7 +16,7 @@ export default {
   home: {
     'intro': '平台介绍',
     'earnings_today':'今日收益',
-    'total_balance':'账户总余额',
+    'total_balance':'总余额',
     'task_number':'剩余任务次数',
     'notice':'最新公告',
     'invitation':'邀请中心',
@@ -36,8 +36,7 @@ export default {
   //我的模块
   my: {
     'copy':'复制',
-    "total_amount": '总金额',
-    'available_balance': '可用余额',
+    'available_balance': '总余额',
     'withdrawal': '提现',
     'upgrade_member': '升级会员',
     'invite_friend': '邀请好友',

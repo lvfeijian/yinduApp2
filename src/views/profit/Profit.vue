@@ -23,7 +23,7 @@
     <div class="balance_cont">
       <div class="balance">
         <div class="title">{{$t('memberCenter.overall_balance')}}</div>
-        <div class="money" v-if="userInfo"><span>$</span>{{userInfo.balance}}</div>
+        <div class="money" v-if="userInfo"><span>$</span>{{userInfo.total_amount}}</div>
       </div>
       <div class="btn" @click="golink('wallet')">{{$t('my.withdrawal')}}</div>
     </div>
@@ -33,7 +33,10 @@
         <div class="money" v-if="userInfo">${{userInfo.today_money}}</div>
       </div>
     </div>
-    <div class="navbar"></div>
+    <div class="navbar">
+      <div class="item" :class="curType == 1 ? 'active' : ''" @click="switchTab(1)">广告收入明细</div>
+      <div class="item" :class="curType == 2 ? 'active' : ''" @click="switchTab(2)">团队收入明细</div>
+    </div>
     <div class="list">
 
       <van-list
@@ -42,6 +45,7 @@
         finished-text="no more"
         @load="onLoad"
         loading-text="loading..."
+        v-show="curType == 1"
       >
         <div class="item" v-for="(item,index) in earningList" :key="index">
           <div class="cont">
@@ -51,25 +55,22 @@
           <div class="hour">{{item.create_time}}</div>
         </div>
       </van-list>
-      <!-- <van-list
-          v-model="loading"
-          :finished="finished"
-          finished-text="no more"
-          @load="onLoad"
-          loading-text="loading..."
-        >
-          <div class="table_item" v-for="(item,index) in teamList" :key="index">
-            <div class="level">
-              {{item.vip_level}}
-            </div>
-            <div class="number">
-              {{item.account.replace(item.account.substring(3,7), "****")}}
-            </div>
-            <div class="name">
-              {{item.name || item.account.replace(item.account.substring(3,7), "****")}}
-            </div>
+      <van-list
+        v-model="loading"
+        :finished="finished"
+        finished-text="no more"
+        @load="onLoadTeam"
+        loading-text="loading..."
+        v-show="curType == 2"
+      >
+        <div class="item" v-for="(item,index) in teamList" :key="index">
+          <div class="cont">
+            <div class="vip">{{item.name}}</div>
+            <div class="price">+{{item.amount}}</div>
           </div>
-        </van-list> -->
+          <div class="hour">{{item.create_time}}</div>
+        </div>
+      </van-list>
       
     </div>
 
@@ -89,13 +90,17 @@ import {
   export default {
     data() {
       return {
-        earningList: [],
+        earningList: [], // 广告收益
+        teamList: [], // 团队收益
         loading: false, // 是否处于加载状态，加载过程中不触发load事件
         finished: false, // 是否已加载完成，加载完成后不再触发load事件
         page: 1,
+        page2: 1,
         total: 0,
+        total2: 0,
         task_earnings: 0,
-        userInfo: null
+        userInfo: null,
+        curType: 1, // 1 广告收入 2团队收入
       }
     },
 
@@ -103,7 +108,6 @@ import {
 
     computed: {},
     created(){
-      this.task_earnings = this.$route.query.task_earnings
     },
     mounted() {
       getUserInfo().then(res => {
@@ -114,11 +118,26 @@ import {
     },
 
     methods: {
+      switchTab(val){
+        this.curType = val
+        this.loading = true
+        this.finished = false
+        if(val == 1){
+          this.page = 1
+          this.earningList = []
+          this.onLoad()
+        }
+        if(val == 2){
+          this.page2 = 1
+          this.teamList = []
+          this.onLoadTeam()
+        }
+      },
       onClickLeft(){
         this.$router.go(-1)
       },
-      golink(path){
-				this.$router.push(path)
+      golink(url){
+        this.$router.push(url)
 			},
       onLoad(){
         taskEaningsApi({
@@ -127,7 +146,7 @@ import {
         }).then(res => {
           if(res.code == 1){
             this.earningList.push(...res.data)
-            this.page+=1
+            this.page++
             this.loading = false;
             // 数据全部加载完成
             if (res.data.length < 20) {
@@ -136,6 +155,22 @@ import {
           }
         })
       },
+      onLoadTeam(){
+        TeamProfitApi({
+          page: this.page2,
+          limit: 20
+        }).then(res => {
+          if(res.code == 1){
+            this.teamList.push(...res.data)
+            this.page2+=1
+            this.loading = false;
+            // 数据全部加载完成
+            if (res.data.length < 20) {
+              this.finished = true;
+            }
+          }
+        })
+      }
       
     }
   }

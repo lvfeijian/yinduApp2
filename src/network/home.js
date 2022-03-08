@@ -41,6 +41,23 @@ export function vipPayApi(params){
         params
     })
 }
+// 充值接口
+export function usePayApi(data){
+    return request({
+        url: '/api/user/pay',
+        method: 'post',
+        data
+    })
+}
+
+// 验证充值接口
+export function checkPayApi(data){
+    return request({
+        url: 'api/user/checkPay',
+        method: 'post',
+        data
+    })
+}
 
 // 订单是否支付接口
 export function vipOrderApi(params){

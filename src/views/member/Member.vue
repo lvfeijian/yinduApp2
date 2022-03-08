@@ -15,7 +15,7 @@
 				<img :src="require('../../assets/img/home/' + Number(index*1+1) + '.png')" />
 				<div class="score-title">{{item.name}}</div>
 				<div class="score-btn" :class="item.select ? 'active' : ''" @click="onItemList(index)">
-					₹{{item.amount}}
+					${{item.amount}}
 				</div>
 			</div>
 			<div class="pay-btn" :class="currentIndex!=null ? 'active' : ''" @click="onPayBtn()">
