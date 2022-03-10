@@ -3,7 +3,7 @@
   <div class="introduce">
     <img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
   	<div class="introduce-bg">
-      <div class="title">Company project introduction</div>
+      <div class="title">{{$t('introduct_title')}}</div>
       <div class="container" v-html="company"></div>
   	</div>
   </div>

@@ -63,7 +63,7 @@ import {
         checkPayApi({
           order_sn: window.localStorage.getItem('out_trade_no')
         }).then(res => {
-          if(res.code == 0){
+          if(res.code == 1){
             if(res.data.pay_status == 1){
 							this.isShowDialog = true
 							this.message = 'PAYMENT SUCCESSFUL!'
@@ -100,8 +100,7 @@ import {
         usePayApi({
 					total: this.money
 				}).then(res => {
-          console.log(res);
-					if(res.code == 0){
+					if(res.code == 1){
 						window.location.href = res.data.url
 						window.localStorage.setItem('out_trade_no', res.data.out_trade_no)
 					}

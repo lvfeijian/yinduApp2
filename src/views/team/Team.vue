@@ -3,34 +3,34 @@
   <div class="team">
     <div class="header">
       <van-nav-bar
-        title="TEAM"
+        :title="$t('team')"
         left-arrow
         @click-left="onClickLeft"
       />
     </div>
     <div class="switch">
       <div class="switch_item">
-        <div class="text">DIRECT PUSH</div>
+        <div class="text">{{$t('direct_push')}}</div>
         <div class="number">{{direct_push}}</div>
       </div>
       <div class="switch_item active">
-        <div class="text">TOTAL PEOPLE</div>
+        <div class="text">{{$t('total_people')}}</div>
         <div class="number">{{total_people}}</div>
       </div>
     </div>
     <div class="table">
       <div class="table_header">
         <div class="header_item">ID</div>
-        <div class="header_item">ACCOUNT</div>
-        <div class="header_item name">TIME</div>
+        <div class="header_item">{{$t('account')}}</div>
+        <div class="header_item name">{{$t('time')}}</div>
       </div>
       <div class="table_body">
         <van-list
           v-model="loading"
           :finished="finished"
-          finished-text="no more"
+          :finished-text="$t('no_more')"
           @load="onLoad"
-          loading-text="loading..."
+          :loading-text="$t('loading')"
         >
           <div class="table_item" v-for="(item,index) in teamList" :key="index">
             <div class="level">

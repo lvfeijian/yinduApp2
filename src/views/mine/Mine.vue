@@ -24,7 +24,7 @@
       <div class="money" v-if="userInfo">${{userInfo.total_amount}}</div>
     </div>
     <div class="available_balance" v-if="userInfo">
-      <p>{{$t('my.available_balance')}}：${{userInfo.balance}}</p >
+      <p>{{$t('wallet.withdrawal_balance')}}：${{userInfo.balance}}</p >
       <div class="btn" @click="golink('wallet')">{{$t('my.withdrawal')}}</div>
     </div>
     
@@ -36,7 +36,7 @@
     <div class="list">
       <div class="list_item" @click="golink('announcement')">
         <img class="icon" src="../../assets/img/mine/6.png" alt="" />
-        <div class="list_name">活动中心</div>
+        <div class="list_name">{{$t('my.active_center')}}</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
       </div>
       <div class="list_item" @click="golink('invite')">
@@ -49,7 +49,7 @@
         <div class="list_name">{{$t('my.team_manage')}}</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
       </div>
-      <div class="list_item" @click="golink('wallet')">
+      <div class="list_item" @click="golink('memberCenter')">
         <img class="icon" src="../../assets/img/mine/3.png" alt="" />
         <div class="list_name">{{$t('my.upgrade_member')}}</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />

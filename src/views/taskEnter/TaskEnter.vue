@@ -13,7 +13,7 @@
     </div>
     <div class="task_cont">
       <div class="introduct" v-if="userInfo">
-        {{$t('taskEnter.now')}}{{userInfo.is_vip == 1 ?  userInfo.vip_level : '普通用户'}}，{{$t('taskEnter.every')}}${{userInfo.is_vip == 1 ? userInfo.vip_data.center_amount : 0}}
+        {{$t('taskEnter.now')}}{{userInfo.is_vip == 1 ?  userInfo.vip_level : $t('taskEnter.user')}}，{{$t('taskEnter.every')}}${{userInfo.is_vip == 1 ? userInfo.vip_data.center_amount : 0}}
       </div>
       <div class="btn_list">
         <div class="btn1" @click="golink('memberCenter')">{{$t('my.upgrade_member')}}</div>

@@ -3,20 +3,20 @@
   <div class="announcement">
     <div class="header">
       <van-nav-bar
-        title="PLATFORM ANNOUNCEMENT"
+        :title="$t('platform_notice')"
         left-arrow
         @click-left="onClickLeft"
       />
     </div>
-    <div class="sign_in" @click="signIn">签到</div>
+    <div class="sign_in" @click="signIn">{{$t('sign_in')}}</div>
     <div style="height:0px;">&nbsp;</div>
     <div class="list">
       <van-list
         v-model="loading"
         :finished="finished"
-        finished-text="no more"
+        :finished-text="$t('no_more')"
         @load="onLoad"
-        loading-text="loading..."
+        :loading-text="$t('loading')"
       >
         <div class="item" v-for="(item,index) in noticeListData" :key="index" @click="handleDetail(item.id)">
           <div class="name">{{item.title}}</div>

@@ -10,17 +10,17 @@
     </div> -->
     <img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
     <div class="account">
-      <div class="text">ACCOUNT BALANCE</div>
+      <div class="text">{{$t('account_number')}}</div>
       <div class="price">${{total_amount}}</div>
     </div>
     <div class="card">
-      <div class="tips">AVAILABLE CASH AMOUNT：${{balance}}</div>
+      <div class="tips">{{$t('wallet.withdrawal_balance')}}：${{balance}}</div>
       <div class="withdraw">
         <div class="sign">$</div>
         <van-field class="ipt" v-model="money" type="number" placeholder="" />
-        <div class="withdraw_all" @click="handleWithdrawAll">WITHDRAW ALL</div>
+        <div class="withdraw_all" @click="handleWithdrawAll">{{$t('withdrawal_all')}}</div>
       </div>
-      <div class="btn" @click="handleUserCash">WITHDRAW</div>
+      <div class="btn" @click="handleUserCash">{{$t('my.withdrawal')}}</div>
     </div>
     <div class="rule_text">
       Withdrawal rules of JCD wallet:<br/>
@@ -98,7 +98,7 @@ import {
           if(res.code == 1){
             this.isShowDialog = true
             this.type = 1
-            this.message = 'WITHDRAW SUCCESSFULLY'
+            this.message = this.$t('wallet.Withdrawal_success')
           }
         })
       },

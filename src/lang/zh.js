@@ -4,15 +4,15 @@ export default {
   'profit': '收益',
   'mine': '我的',
   'login': '登录',
-  'account_number': 'ACCOUNT NUMBER',
-  'password': 'PASSWORD',
-  'registered_account': 'REGISTERED ACCOUNT',
-  'register': "REGISTER",
-  'phone_number': 'PHONE NUMBER',
-  'input_password': 'INPUT PASSWORD',
-  'confirm_password': 'CONFIRM PASSWORD',
-  'invitation_code': 'INVITATION CODE',
-  'download_app': 'DOWNLOAD APP',
+  'account_number': '帐号',
+  'password': '密码',
+  'registered_account': '注册帐户',
+  'register': "主车",
+  'phone_number': '电话号码',
+  'input_password': '输入密码',
+  'confirm_password': '确认密码',
+  'invitation_code': '邀请验证码',
+  'download_app': '下载应用',
   home: {
     'intro': '平台介绍',
     'earnings_today':'今日收益',
@@ -22,11 +22,11 @@ export default {
     'invitation':'邀请中心',
     'upgrade_member':'升级会员',
     'membership_center':'会员中心',
-    'new_version': 'New version',
-    'uodate_download': 'Update download'
+    'new_version': '新版本',
+    'uodate_download': '更新下载'
   },
   memberCenter: {
-    'more_money': 'UPGRADE VIP TO EARN MORE MONEY',
+    'more_money': '升级VIP以赚取更多金钱',
     'member_level':  '当前会员等级',
     'next_level': '距离下个等级还差',
     'overall_balance': '总余额',
@@ -39,13 +39,15 @@ export default {
     'available_balance': '总余额',
     'withdrawal': '提现',
     'upgrade_member': '升级会员',
+    'active_center': '活动中心',
     'invite_friend': '邀请好友',
     'team_manage': '团队管理',
     'back_card': '银行卡信息',
     'change_pwd': '修改密码',
     'platform_intro': '平台介绍',
     'exit': '退出登录',
-    'copy_success': '复制成功'
+    'copy_success': '复制成功',
+    
   },
   //收益模块
   income: {
@@ -54,20 +56,49 @@ export default {
     'advertising_revenue': '广告收入',
     'team_income': '团队收入',
     'today_total_income': '今日总收入',
-    
+    'adv_revenue_detail': '广告收入明细',
+    'team_revenue_detail': '团队收入明细',
   },
   taskEnter: {
     'do_task': '做任务',
     'now': '你现在是',
+    'user': '普通用户',
     'every': '每次任务收入是',
     'finish_task': '已完成任务',
     'remain_task': '剩余任务',
     'task_intro': '任务介绍',
-    '': '',
-    '': '',
   },
-
-
-  'login_tips': 'IF YOU FORGET YOUR PASSWORD,PLEASE CONTACT THE STAFF',
-
+  wallet: {
+    'withdrawal_balance':'可提现余额',
+    'Withdrawal_success': '提现成功'
+  },
+  bankcard: {
+    title: '银行卡',
+    real_name: '真名*',
+    bank_name:'银行名称*',
+    branch_name:'分支机构名称',
+    account_no:'号码',
+    ifsc_code:'IFSC代码',
+    phone:'电话',
+    email:'邮箱',
+    bind_success: '绑定成功',
+    confirm: '确认'
+  },
+  'sign_in': '签到',
+  'platform_notice': '平台公告',
+  'no_more': '没有更多了',
+  'loading': '加载中...',
+  'copy_success': '复制成功',
+  'copy': '复制',
+  'team': '团队',
+  'direct_push': '直推人数',
+  'total_people': '总人数',
+  'account': '账户',
+  'time': '时间',
+  'withdrawal_all': '全部提现',
+  'login_tips': '如果忘记密码，请联系工作人员',
+  'introduct_title': '公司项目介绍',
+  'new_pwd': '更改新密码',
+  'confirm_new_pwd': '确认新密码',
+  'ok': '确认',
 }

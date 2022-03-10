@@ -34,8 +34,8 @@
       </div>
     </div>
     <div class="navbar">
-      <div class="item" :class="curType == 1 ? 'active' : ''" @click="switchTab(1)">广告收入明细</div>
-      <div class="item" :class="curType == 2 ? 'active' : ''" @click="switchTab(2)">团队收入明细</div>
+      <div class="item" :class="curType == 1 ? 'active' : ''" @click="switchTab(1)">{{$t('income.adv_revenue_detail')}}</div>
+      <div class="item" :class="curType == 2 ? 'active' : ''" @click="switchTab(2)">{{$t('income.team_revenue_detail')}}</div>
     </div>
     <div class="list">
 

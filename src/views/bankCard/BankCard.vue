@@ -3,21 +3,21 @@
   <div class="backcard">
     <div class="header">
       <van-nav-bar
-        title="BANK CARD"
+        :title="$t('bankcard.title')"
         left-arrow
         @click-left="onClickLeft"
       />
     </div>
     <div class="content">
-      <input type="text" v-model="real_name" placeholder="REAL NAME *">
-      <input type="text" v-model="bank_name" placeholder="BANK NAME *">
-      <input type="text" v-model="branch_name" placeholder="BRANCH NAME">
-      <input type="number" v-model="account_no" placeholder="ACCOUNT NO.">
-      <input type="text" v-model="ifsc_code" placeholder="IFSC CODE">
-      <input type="number" v-model="phone" placeholder="PHONE">
-      <input type="text" v-model="email" placeholder="EMAIL">
+      <input type="text" v-model="real_name" :placeholder="$t('bankcard.real_name')">
+      <input type="text" v-model="bank_name" :placeholder="$t('bankcard.bank_name')">
+      <input type="text" v-model="branch_name" :placeholder="$t('bankcard.branch_name')">
+      <input type="number" v-model="account_no" :placeholder="$t('bankcard.account_no')">
+      <input type="text" v-model="ifsc_code" :placeholder="$t('bankcard.ifsc_code')">
+      <input type="number" v-model="phone" :placeholder="$t('bankcard.phone')">
+      <input type="text" v-model="email" :placeholder="$t('bankcard.email')">
     </div>
-    <div class="ok" @click="submit">CONFIRM</div>
+    <div class="ok" @click="submit">{{$t('bankcard.confirm')}}</div>
     <!-- <toast msg="msg" isshow="true"></toast> -->
     <Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" :type="type">
       {{message}}
@@ -76,7 +76,7 @@ import {
           if(res.code == 1){
             this.type = 1
             this.isShowDialog = true
-            this.message = res.msg || 'BIND SUCCESSFULLY'
+            this.message = res.msg || this.$t('bankcard.bind_success')
           }
         })
       },

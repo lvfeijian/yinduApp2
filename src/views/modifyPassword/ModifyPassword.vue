@@ -3,16 +3,16 @@
   <div class="modify_password">
     <div class="header">
       <van-nav-bar
-        title="CHANGE PASSWORD"
+        :title="$t('my.change_pwd')"
         left-arrow
         @click-left="onClickLeft"
       />
     </div>
     <div class="content">
-      <input type="text" v-model="password" maxlength="18" placeholder="CHANGE NEW PASSWORD">
-      <input type="text" v-model="confirmPwd" maxlength="18" placeholder="CONFIRM THE NEW PASSWORD">
+      <input type="text" v-model="password" maxlength="18" :placeholder="$t('new_pwd')">
+      <input type="text" v-model="confirmPwd" maxlength="18" :placeholder="$t('confirm_new_pwd')">
     </div>
-    <div class="ok" @click="submit">ok</div>
+    <div class="ok" @click="submit">{{$t('ok')}}</div>
   </div>
 </template>
 
