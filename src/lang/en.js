@@ -46,7 +46,8 @@ export default {
     'change_pwd': 'modify password ',
     'platform_intro': 'platform introduction ',
     'exit': 'exit',
-    'copy_success': 'copy succeeded'
+    'copy_success': 'copy succeeded',
+    'app_download':'APP DOWNLOAD'
   },
   //Revenue module
   income: {
@@ -100,4 +101,6 @@ export default {
   'new_pwd': 'change new password ',
   'confirm_new_pwd': 'confirm new password ',
   'ok': 'confirm',
+  'apple_download': 'APPLE CLIENT DOWNLOAD',
+  'android_download': 'ANDROID CLIENT DOWNLOAD'
 }

@@ -3,7 +3,7 @@
   <div class="announcement_detail">
     <div class="header">
       <van-nav-bar
-        title="PLATFORM ANNOUNCEMENT"
+        :title="$t('platform_notice')"
         left-arrow
         @click-left="onClickLeft"
       />

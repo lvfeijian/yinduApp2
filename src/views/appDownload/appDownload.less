@@ -1,32 +1,23 @@
 .app_download{
-  .header{
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    margin-top: 0px;
-    z-index: 100;
-    /deep/.van-nav-bar{
-      background: #2B2A28;
-    }
-    /deep/.van-hairline--bottom::after {
-      border-bottom-width: 0px!important;
-    }
-    /deep/.van-nav-bar__content{
-      background: #2B2A28;
-      color: #DEBB81!important;
-      .van-nav-bar__title{
-        color: #DEBB81!important;
-      }
-      .van-icon{
-        font-size: 24px;
-        color: #DEBB81!important;
-      }
-    }
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/img/common_bg.png') 100% 100% no-repeat;
+  background-color: #6A30FE;
+  background-size: cover;
+  overflow: hidden;
+  .title{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 40px;
   }
   .content{
-    width: 100vw;
-    height: 100vh;
-    background: #2B2A28;
+    width: 340px;
+    height: 550px;
+    background: #FFFFFF;
+    border-radius: 13px;
+    margin: auto;
+    margin-top: 40px;
     .logo{
       width: 82px;
       margin-left: 50%;
@@ -37,7 +28,7 @@
       width: 300px;
       height: 57px;
       margin: auto;
-      background: linear-gradient(180deg, #DEBB81 0%, #CFA35E 100%);
+      background: linear-gradient(360deg, #865afd 0%, #7271fd 100%);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -50,7 +41,7 @@
         font-size: 15px;
         font-family: Roboto-Regular, Roboto;
         font-weight: 400;
-        color: #2B2A28;
+        color: #fff;
         line-height: 22px;
       }
     }

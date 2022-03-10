@@ -47,7 +47,7 @@ export default {
     'platform_intro': '平台介绍',
     'exit': '退出登录',
     'copy_success': '复制成功',
-    
+    'app_download':'APP下载'
   },
   //收益模块
   income: {
@@ -101,4 +101,6 @@ export default {
   'new_pwd': '更改新密码',
   'confirm_new_pwd': '确认新密码',
   'ok': '确认',
+  'apple_download': '苹果客户端下载',
+  'android_download': '安卓客户端下载'
 }

@@ -1,22 +1,17 @@
 <!-- app下载 -->
 <template>
   <div class="app_download">
-    <div class="header">
-      <van-nav-bar
-        title="APP DOWNLOAD"
-        left-arrow
-        @click-left="onClickLeft"
-      />
-    </div>
+		<img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
+    <p class="title">{{$t('my.app_download')}}</title>
     <div class="content">
       <img class="logo" src="../../assets/img/appDownload/logo.png" alt="" />
       <div class="btn_apple" @click="downApple">
         <img src="../../assets/img/appDownload/pingguo.png" alt="" />
-        <div class="text">APPLE CLIENT DOWNLOAD</div>
+        <div class="text">{{$t('apple_download')}}</div>
       </div>
       <div class="btn_android" @click="downAndroid">
         <img src="../../assets/img/appDownload/anzhuo.png" alt="" />
-        <div class="text">ANDROID CLIENT DOWNLOAD</div>
+        <div class="text">{{$t('android_download')}}</div>
       </div>
     </div>
   </div>
@@ -52,7 +47,7 @@ import {
     mounted() { },
 
     methods: {
-      onClickLeft(){
+      goBack(){
         this.$router.go(-1)
       },
       downApple(){

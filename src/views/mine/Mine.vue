@@ -69,6 +69,12 @@
         <div class="list_name">{{$t('my.platform_intro')}}</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
       </div>
+      <div class="list_item" @click="golink('appDownload')">
+        <img class="icon" src="../../assets/img/mine/7.png" alt="" />
+        <div class="list_name">{{$t('my.app_download')}}</div>
+        <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
+      </div>
+      
       
       <!-- <div class="list_item" @click="golink('bankCard')">
         <img class="icon" src="../../assets/img/mine/yinhangqia.png" alt="" />
