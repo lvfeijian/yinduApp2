@@ -10,7 +10,7 @@
     </div> -->
     <img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
     <div class="account">
-      <div class="text">{{$t('account_number')}}</div>
+      <div class="text">{{$t('account')}}</div>
       <div class="price">${{total_amount}}</div>
     </div>
     <div class="card">
@@ -50,7 +50,8 @@ import {
         money: '',
         isShowDialog: false,
         type: 1,
-        message: ''
+        message: '',
+        min_money: 12500
       };
     },
 
@@ -81,8 +82,8 @@ import {
         this.money = this.balance
       },
       handleUserCash(){
-        if(this.money < 120){
-          Toast('CASH AMOUNT IS GREATER THAN 120')
+        if(this.money < this.min_money){
+          Toast(this.$t('wallet_tips')+this.min_money)
           return
         }
         userCashApi({

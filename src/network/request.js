@@ -41,6 +41,8 @@ export function request(config) {
                 Notify({ type: 'danger', message: res.data.msg });
             } else if (res.data.code == '10001') {
                 window.localStorage.removeItem("token");
+            } else {
+                resolve(res.data)
             }
         }, error => {
             reject(error)

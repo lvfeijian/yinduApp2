@@ -20,9 +20,7 @@
       >
         <div class="item" v-for="(item,index) in noticeListData" :key="index" @click="handleDetail(item.id)">
           <div class="name">{{item.title}}</div>
-          <div class="intro">
-            <img :src="item.logo" alt="" />
-          </div>
+          <img class="picture" :src="item.logo" alt="" />
           <div class="time">{{item.create_time}}</div>
         </div>
       </van-list>

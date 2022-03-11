@@ -14,7 +14,7 @@
     </div>
     <div class="task_cont">
       <div class="introduct" v-if="userInfo">
-        {{$t('taskEnter.now')}}{{userInfo.is_vip == 1 ?  userInfo.vip_level : $t('taskEnter.user')}}，{{$t('taskEnter.every')}}${{userInfo.is_vip == 1 ? userInfo.vip_data.center_amount : 0}}
+        {{$t('taskEnter.now')}}{{userInfo.is_vip == 1 ?  userInfo.vip_level : $t('taskEnter.user')}}，{{$t('taskEnter.every')}}${{userInfo.vip_data.center_amount || 0}}
       </div>
       <div class="btn_list">
         <div class="btn1" @click="golink('memberCenter')">{{$t('my.upgrade_member')}}</div>
@@ -177,6 +177,11 @@
         if(status){
           document.body.scrollIntoView()
         }
+        getUserInfo().then(res => {
+          if (res.code == 1) {
+            this.userInfo = res.data
+          }
+        })
         if (this.opts) {
           return;
         }
@@ -230,14 +235,14 @@
           if (timeDiff > opt.duration) {
 
             opt.isFinished = true;
-              if(this.userInfo.vip_surplus > 0 && this.userInfo.is_vip == 1){
+              if(this.userInfo.vip_surplus > 0 && (this.userInfo.is_vip == 1||this.userInfo.vip_level=="普通会员")){
                 // 会员 去做任务
                 pos = -80*this.fontSize
                 
                 setTimeout(() => {
                   this.isShowDialog2 =true
                 }, 2200);
-              } else if(this.userInfo.vip_surplus == 0 && this.userInfo.is_vip == 1){
+              } else if(this.userInfo.vip_surplus == 0 && (this.userInfo.is_vip == 1||this.userInfo.vip_level=="普通会员")){
                 // 会员 任务次数使用完毕
                 Notify({ type: 'danger', message: '每日任务次数已用完' });
                 pos = 0 + this.fontSize

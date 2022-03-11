@@ -61,23 +61,22 @@ import {
     mounted() { 
       if(window.localStorage.getItem('out_trade_no')){
         checkPayApi({
-          order_sn: window.localStorage.getItem('out_trade_no')
+          order_sn:  window.localStorage.getItem('out_trade_no')
         }).then(res => {
+          window.localStorage.removeItem('out_trade_no')
           if(res.code == 1){
-            if(res.data.pay_status == 1){
-							this.isShowDialog = true
-							this.message = 'PAYMENT SUCCESSFUL!'
-							this.type = 1
-							this.btnText = 'ok'
-						} else if(res.data.pay_status == 0){
-							this.isShowDialog = true
-							this.message = 'PAYMENT FAILED!'
-							this.type = 2
-							this.btnText = 'PLEASE REPAY'
-						}
+            this.isShowDialog = true
+            this.message = res.msg
+            this.type = 1
+            this.btnText = 'ok'
+          } else {
+            this.isShowDialog = true
+            this.message = res.msg
+            this.type = 2
+            this.btnText = 'ok'
           }
         }).catch(() =>{
-          window.localStorage.removeItem('order_sn')
+          window.localStorage.removeItem('out_trade_no')
         })
       }
       

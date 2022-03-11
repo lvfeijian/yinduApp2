@@ -10,7 +10,8 @@
         <p class="text">{{$t('memberCenter.member_level')}}</p>
         <p class="text2">{{$t('memberCenter.next_level')}} {{userInfo.vip_next_data}}</p>
       </div>
-      <img class="img" src="../../assets/img/memberCenter/7.png" alt="" />
+      <img v-if="vip_level" class="img" :src='"../../assets/img/memberCenter/"+ vip_level + ".png"' alt="" />
+      <img v-else class="img" src="../../assets/img/memberCenter/1-1.png" alt="" />
     </section>
     <div class="balance">
       <div class="total">{{$t('memberCenter.overall_balance')}}：<span>{{userInfo.total_amount}}</span></div>

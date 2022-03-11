@@ -110,6 +110,6 @@ export default {
   'introduce': 'INTRODUCE',
   'not_vip':'YOU ARE NOT YET A VIP',
   'buy': 'BUY NOW',
-  'rules': "Withdrawal rules of JCD wallet:<br/>1. Monday to Saturday, 10:00-16:00 every day, withdrawals outside this time period will be postponed to the next day. The withdrawal application on Sunday will be postponed to the next Monday.<br/>2. Due to the withdrawal restrictions of the banking system, each withdrawal needs to be greater than 500 rupees.<br/>3. Withdrawal fee: $$$10 + 5% of the withdrawal amount<br/><br/>Rewards for false registration accounts will be deducted and the account will be frozen"
-
+  'rules': "Withdrawal rules of JCD wallet:<br/>1. Monday to Saturday, 10:00-16:00 every day, withdrawals outside this time period will be postponed to the next day. The withdrawal application on Sunday will be postponed to the next Monday.<br/>2. Due to the withdrawal restrictions of the banking system, each withdrawal needs to be greater than 500 rupees.<br/>3. Withdrawal fee: $$$10 + 5% of the withdrawal amount<br/><br/>Rewards for false registration accounts will be deducted and the account will be frozen",
+  'wallet_tips': 'CASH AMOUNT IS GREATER THAN'
 }
