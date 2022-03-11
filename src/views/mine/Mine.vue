@@ -35,7 +35,7 @@
     </div>
     <div class="list">
       <div class="list_item" @click="golink('announcement')">
-        <img class="icon" src="../../assets/img/mine/6.png" alt="" />
+        <img class="icon" src="../../assets/img/mine/0.png" alt="" />
         <div class="list_name">{{$t('my.active_center')}}</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
       </div>
@@ -67,6 +67,11 @@
       <div class="list_item" @click="golink('introduce')">
         <img class="icon" src="../../assets/img/mine/6.png" alt="" />
         <div class="list_name">{{$t('my.platform_intro')}}</div>
+        <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
+      </div>
+      <div class="list_item" @click="goService1">
+        <img class="icon" src="../../assets/img/mine/8.png" alt="" />
+        <div class="list_name">{{$t('my.online_service')}}</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
       </div>
       <div class="list_item" @click="golink('appDownload')">
@@ -145,7 +150,11 @@
           if(res.code == 1){
             this.userInfo = res.data
             if(this.userInfo.is_vip == 1){
-              this.vip_level = this.userInfo.vip_level.replace('VIP','')
+              if(this.userInfo.vip_level == '普通会员'){
+                this.vip_level = 1
+              } else {
+                this.vip_level = this.userInfo.vip_level.replace('AI','')
+              }
             } else {
               this.vip_level = null
             }

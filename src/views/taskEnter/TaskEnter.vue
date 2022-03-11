@@ -1,6 +1,7 @@
 <!-- 任务入口页 -->
 <template>
   <div class="task_enter">
+    <div class="title">{{$t('taskEnter.tarea')}}</div>
     <div class="task_bg" @click="start">
       <div class="frulit-box">
         <div class="slot" v-for="(slot, index) in slots" ref="slots" :key="index">
@@ -9,7 +10,7 @@
           </div>
         </div>
       </div>
-      <div class="start">{{$t('taskEnter.do_task')}}</div>
+      <div class="start">{{$t('taskEnter.start')}}</div>
     </div>
     <div class="task_cont">
       <div class="introduct" v-if="userInfo">
@@ -22,7 +23,7 @@
       <div class="line"></div>
       <div class="task_number" v-if="userInfo">
         <div class="item">
-          <div class="num">{{userInfo.vip_data.show_num - userInfo.vip_surplus}}</div>
+          <div class="num">{{userInfo.vip_data.show_num || 0 - userInfo.vip_surplus}}</div>
           <div class="text">{{$t('taskEnter.finish_task')}}</div>
         </div>
         <div class="item">

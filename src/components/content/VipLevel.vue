@@ -28,7 +28,11 @@
         if (res.code == 1) {
           this.userInfo = res.data
           if(this.userInfo.is_vip == 1){
-            this.vip_level = this.userInfo.vip_level.replace('VIP','')
+            if(this.userInfo.vip_level == '普通会员'){
+							this.vip_level = 1
+						} else {
+              this.vip_level = this.userInfo.vip_level.replace('AI','')
+            }
           } else {
             this.vip_level = null
           }

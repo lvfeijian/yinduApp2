@@ -9,7 +9,7 @@
       <section>
         <img src="@/assets/img/login/user.svg" alt="" class="icon" />
         <div class="block">
-          <p class="city_code">+34</p>
+          <p class="city_code">+57</p>
           <input class="userInput" type="number" v-model="phone" @input="changeNumber" :placeholder="$t('account_number')" :max="phoneLength">
         </div>
       </section>
@@ -42,7 +42,7 @@ export default {
       phone: '',
       password: '',
       loading: false,
-      phoneLength: 9
+      phoneLength: 10
     }
   },
 

@@ -7,7 +7,7 @@ export default {
   'account_number': '帐号',
   'password': '密码',
   'registered_account': '注册帐户',
-  'register': "主车",
+  'register': "注册",
   'phone_number': '电话号码',
   'input_password': '输入密码',
   'confirm_password': '确认密码',
@@ -47,7 +47,8 @@ export default {
     'platform_intro': '平台介绍',
     'exit': '退出登录',
     'copy_success': '复制成功',
-    'app_download':'APP下载'
+    'app_download':'APP下载',
+    'online_service': '在线客服'
   },
   //收益模块
   income: {
@@ -60,6 +61,8 @@ export default {
     'team_revenue_detail': '团队收入明细',
   },
   taskEnter: {
+    'start': '做任务',
+    'tarea': '任务',
     'do_task': '做任务',
     'now': '你现在是',
     'user': '普通用户',
@@ -102,5 +105,11 @@ export default {
   'confirm_new_pwd': '确认新密码',
   'ok': '确认',
   'apple_download': '苹果客户端下载',
-  'android_download': '安卓客户端下载'
+  'android_download': '安卓客户端下载',
+  'invite': '邀请',
+  'introduce': '介绍',
+  'not_vip': '你不是会员',
+  'buy': '立即购买',
+  'rules':"JCD钱包取款规则：<br/>1.周一至周六，每天10:00-16:00，超过此时间段的提款将推迟到第二天。周日的提款申请将推迟到下周一。<br/>2.由于银行系统的提款限制，每次提款需要大于500卢比。<br/>3.取款费：$$$10+5%取款金额<br/><br/>虚假注册账户的奖励将被扣除，账户将被冻结"
+
 }

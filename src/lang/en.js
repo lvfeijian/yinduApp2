@@ -47,7 +47,8 @@ export default {
     'platform_intro': 'platform introduction ',
     'exit': 'exit',
     'copy_success': 'copy succeeded',
-    'app_download':'APP DOWNLOAD'
+    'app_download':'APP DOWNLOAD',
+    'online_service': 'ONLINE SERVICE'
   },
   //Revenue module
   income: {
@@ -60,6 +61,8 @@ export default {
     'team_revenue_detail': 'team revenue details',
   },
   taskEnter: {
+    'start': 'START',
+    'tarea': 'Tarea',
     'do_task': 'do task',
     'now': 'you are',
     'user': 'ordinary user',
@@ -102,5 +105,11 @@ export default {
   'confirm_new_pwd': 'confirm new password ',
   'ok': 'confirm',
   'apple_download': 'APPLE CLIENT DOWNLOAD',
-  'android_download': 'ANDROID CLIENT DOWNLOAD'
+  'android_download': 'ANDROID CLIENT DOWNLOAD',
+  'invite': 'INVITATION',
+  'introduce': 'INTRODUCE',
+  'not_vip':'YOU ARE NOT YET A VIP',
+  'buy': 'BUY NOW',
+  'rules': "Withdrawal rules of JCD wallet:<br/>1. Monday to Saturday, 10:00-16:00 every day, withdrawals outside this time period will be postponed to the next day. The withdrawal application on Sunday will be postponed to the next Monday.<br/>2. Due to the withdrawal restrictions of the banking system, each withdrawal needs to be greater than 500 rupees.<br/>3. Withdrawal fee: $$$10 + 5% of the withdrawal amount<br/><br/>Rewards for false registration accounts will be deducted and the account will be frozen"
+
 }

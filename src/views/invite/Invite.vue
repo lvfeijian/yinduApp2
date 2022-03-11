@@ -2,7 +2,8 @@
 <template>
   <div class="introduce">
 		<img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
-  	<div class="introduce-bg">
+    <p class="title">{{$t('invite')}}</title>
+		<div class="introduce-bg">
 			<div class="content" v-html="invitationData"></div>
 			<div class="btn" @click="handleCopy">{{$t('copy')}}</div>
 			<Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" type="1">
@@ -55,7 +56,7 @@
 			},
 			handleCopy(){
 				let userInfo = JSON.parse(localStorage.getItem('userInfo'))
-				let inviteUrl = 'http://m.globejcd.top/' + 'register?code=' + userInfo.code
+				let inviteUrl = 'http://m.vipcbagent.com/' + 'register?code=' + userInfo.code
         this.copy(inviteUrl)
       },
       copy(data) {

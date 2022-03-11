@@ -22,14 +22,7 @@
       </div>
       <div class="btn" @click="handleUserCash">{{$t('my.withdrawal')}}</div>
     </div>
-    <div class="rule_text">
-      Withdrawal rules of JCD wallet:<br/>
-      1. Monday to Saturday, 10:00-16:00 every day, withdrawals outside this time period will be postponed to the next day. The withdrawal application on Sunday will be postponed to the next Monday.<br/>
-      2. Due to the withdrawal restrictions of the banking system, each withdrawal needs to be greater than 500 rupees.<br/>
-      3. Withdrawal fee: $$$10 + 5% of the withdrawal amount
-      <br/>
-      <br/>
-      Rewards for false registration accounts will be deducted and the account will be frozen
+    <div class="rule_text" v-html="$t('rules')">
     </div>
     <Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" :type="type">
       {{message}}

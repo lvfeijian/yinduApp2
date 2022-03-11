@@ -63,13 +63,15 @@
 		<div class="member" v-if="userInfo">
 			<img class="go_icon" src="../../assets/img/mine/CombinedShape.png" alt="" />
 			<div class="title">{{$t('home.membership_center')}}</div>
-			<div class="member_cont" @click="golink('memberCenter')">
+			<div class="member_cont" @click="golink('memberCenter')" v-if="vipListData">
 				<template v-if="vip_level">
 					<div class="pre_level" v-if="vip_level==9">
 						<img :src='"../../assets/img/memberCenter/" + (vip_level*1-2) + ".png"' alt="" />
+						<div class="money">${{vipListData[6].satisfy}}</div>
 					</div>
-					<div class="pre_level" v-if="vip_level==8">
+					<div class="pre_level active" v-if="vip_level>=8">
 						<img :src='"../../assets/img/memberCenter/" + (vip_level*1-1) + ".png"' alt="" />
+						<div class="money">${{vipListData[7].satisfy}}</div>
 					</div>
 					<div class="left1">
 						<img :src='"../../assets/img/memberCenter/" + vip_level + ".png"' alt="" />
@@ -77,20 +79,25 @@
 					</div>
 					<div class="next_level" v-if="vip_level<=8">
 						<img :src='"../../assets/img/memberCenter/" + (vip_level*1+1) + "-1.png"' alt="" />
+						<div class="money">${{vipListData[vip_level].satisfy}}</div>
 					</div>
 					<div class="next_level" v-if="vip_level<=7">
 						<img :src='"../../assets/img/memberCenter/" + (vip_level*1+2) + "-1.png"' alt="" />
+						<div class="money">${{vipListData[vip_level+1].satisfy}}</div>
 					</div>
 				</template>
 				<template v-else>
 					<div class="next_level" style="margin-left: 0px;">
 						<img src="../../assets/img/memberCenter/1-1.png" alt="" />
+						<div class="money">${{vipListData[0].satisfy}}</div>
 					</div>
 					<div class="next_level">
 						<img src="../../assets/img/memberCenter/2-1.png" alt="" />
+						<div class="money">${{vipListData[1].satisfy}}</div>
 					</div>
 					<div class="next_level">
 						<img src="../../assets/img/memberCenter/3-1.png" alt="" />
+						<div class="money">${{vipListData[2].satisfy}}</div>
 					</div>
 				</template>
 			</div>
@@ -102,9 +109,10 @@
 				<img :src="require('../../assets/img/home/' + item.url)"/>
 			</div>
 		</div> -->
-		<Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog"  btnText="BUY NOW">
-			<div>YOU ARE NOT <br>
-				YET A VIP</div>
+		<Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" :btnText="$t('buy')">
+			<div>
+				{{$t('not_vip')}}
+			</div>
     </Dialog>
 		<div class="dialog1" v-if="isShowSpringFrame">
 			<div class="dialog_cont">
@@ -132,7 +140,10 @@
 	import {
     getUserInfo,
 		downloadApi
-  } from '@/network/mine'
+	} from '@/network/mine'
+	import {
+    vipListApi
+  } from '@/network/memberCenter'
 	import {
 		NoticeBar,
 		Swipe,
@@ -177,6 +188,7 @@
 				version: '', // 最新版本
 				vip_level: null,
 				userInfo:null,
+				vipListData: null
 			};
 		},
 
@@ -217,6 +229,7 @@
 					}
 				}
 			})
+			
 		},
 		mounted() {
 			this.getNoticeList()
@@ -232,10 +245,20 @@
 					this.userInfo = res.data
 					this.user_status = res.data.user_status
 					if(this.is_vip == 1){
-						this.vip_level = res.data.vip_level.replace('VIP','')*1
+						if(res.data.vip_level == '普通会员'){
+							this.vip_level = 1
+						} else {
+							this.vip_level = res.data.vip_level.replace('AI','')*1
+						}
 					} else {
 						this.vip_level = null
 					}
+				}
+			})
+			vipListApi().then(res => {
+				if(res.code == 1){
+					this.vipListData = res.data
+					res.data.map(item => {})
 				}
 			})
 		},
