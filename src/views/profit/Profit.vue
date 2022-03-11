@@ -42,7 +42,7 @@
       <van-list
         v-model="loading"
         :finished="finished"
-        finished-text="no more"
+        :finished-text="$t('no_more')"
         @load="onLoad"
         loading-text="loading..."
         v-show="curType == 1"
@@ -58,7 +58,7 @@
       <van-list
         v-model="loading"
         :finished="finished"
-        finished-text="no more"
+        :finished-text="$t('no_more')"
         @load="onLoadTeam"
         loading-text="loading..."
         v-show="curType == 2"

@@ -23,7 +23,7 @@
       <div class="line"></div>
       <div class="task_number" v-if="userInfo">
         <div class="item">
-          <div class="num">{{userInfo.vip_data.show_num || 0 - userInfo.vip_surplus}}</div>
+          <div class="num">{{(userInfo.vip_data.show_num||0) - userInfo.vip_surplus}}</div>
           <div class="text">{{$t('taskEnter.finish_task')}}</div>
         </div>
         <div class="item">

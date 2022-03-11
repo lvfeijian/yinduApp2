@@ -95,6 +95,9 @@
     <div class="exit" @click="exitSystem">
       {{$t('my.exit')}}
     </div>
+    <div class="service" @click="goService2">
+      <img src="@/assets/img/mine/kefu2.png" alt="" />
+    </div>
     <Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" type="1">
       {{$t('my.copy_success')}}
     </Dialog>

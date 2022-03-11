@@ -103,6 +103,9 @@
 			</div>
 		</div>
 		<VipLevel></VipLevel>
+		<div class="service" @click="goService2">
+      <img src="@/assets/img/mine/kefu2.png" alt="" />
+    </div>
 		<!-- 列表项 -->
 		<!-- <div class="item-box">
 			<div class="item-list"  v-for="(item,index) in listData" :key="index" @click="onItemBanner(item.path)">
@@ -139,7 +142,8 @@
 	} from '@/network/home'
 	import {
     getUserInfo,
-		downloadApi
+		downloadApi,
+		getChatUrl
 	} from '@/network/mine'
 	import {
     vipListApi
@@ -261,9 +265,21 @@
 					res.data.map(item => {})
 				}
 			})
+			getChatUrl().then(res => {
+        if(res.code == 1){
+          this.chatUrl = res.data
+        }
+      })
 		},
 
 		methods: {
+			goService2(){
+        if(this.chatUrl.url2 == ''){
+          Toast( 'no service');
+          return
+        }
+        window.location.href = this.chatUrl.url2
+      },
 			golink(path){
 				this.$router.push(path)
 			},

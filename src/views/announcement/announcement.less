@@ -29,16 +29,17 @@
   }
   .sign_in{
     position: fixed;
-    right: 20px;
+    right: 10px;
     top: 50%;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 40px;
     border-radius: 50%;
     color: #666;
-    border: 1px solid #999;
     font-size: 14px;
     text-align: center;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
   .list{
     overflow: hidden;
@@ -60,7 +61,9 @@
         margin-top: 14px;
       }
       .picture{
-        width: 100%;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-top: 15px;
       }
       .intro{
         font-size: 13px;

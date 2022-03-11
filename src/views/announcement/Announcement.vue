@@ -8,7 +8,9 @@
         @click-left="onClickLeft"
       />
     </div>
-    <div class="sign_in" @click="signIn">{{$t('sign_in')}}</div>
+    <div class="sign_in" @click="signIn">
+      <img src="@/assets/img/mine/9.png" alt="" />
+    </div>
     <div style="height:0px;">&nbsp;</div>
     <div class="list">
       <van-list
@@ -59,7 +61,7 @@ import {
       signIn(){
         userReportApi().then(res => {
           if(res.code == 1){
-            Toast('签到成功')
+            Toast(res.msg)
           }
         })
       },
