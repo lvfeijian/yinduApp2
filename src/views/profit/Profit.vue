@@ -44,12 +44,12 @@
         :finished="finished"
         :finished-text="$t('no_more')"
         @load="onLoad"
-        loading-text="loading..."
+        :loading-text="$t('loading')"
         v-show="curType == 1"
       >
         <div class="item" v-for="(item,index) in earningList" :key="index">
           <div class="cont">
-            <div class="vip">{{item.task_name}}</div>
+            <div class="vip">{{$t('get_income')}}</div>
             <div class="price">+{{item.amount}}</div>
           </div>
           <div class="hour">{{item.create_time}}</div>
@@ -60,12 +60,12 @@
         :finished="finished"
         :finished-text="$t('no_more')"
         @load="onLoadTeam"
-        loading-text="loading..."
+        :loading-text="$t('loading')"
         v-show="curType == 2"
       >
         <div class="item" v-for="(item,index) in teamList" :key="index">
           <div class="cont">
-            <div class="vip">{{item.name}}</div>
+            <div class="vip">{{$t('get_income')}}</div>
             <div class="price">+{{item.amount}}</div>
           </div>
           <div class="hour">{{item.create_time}}</div>

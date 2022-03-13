@@ -54,6 +54,11 @@
         <div class="list_name">{{$t('my.upgrade_member')}}</div>
         <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
       </div>
+      <div class="list_item" @click="golink('record')">
+        <img class="icon" src="../../assets/img/mine/10.png" alt="" />
+        <div class="list_name">{{$t('withdrawal_record')}}</div>
+        <img class="jiantou" src="../../assets/img/mine/CombinedShape.png" alt="" />
+      </div>
       <div class="list_item" @click="golink('bankCard')">
         <img class="icon" src="../../assets/img/mine/4.png" alt="" />
         <div class="list_name">{{$t('my.back_card')}}</div>

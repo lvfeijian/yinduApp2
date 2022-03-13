@@ -1,3 +1,4 @@
+// 中文
 export default {
   'page': '首页',
   'task': '任务',
@@ -111,6 +112,13 @@ export default {
   'not_vip': '你不是会员',
   'buy': '立即购买',
   'rules':"JCD钱包取款规则：<br/>1.周一至周六，每天10:00-16:00，超过此时间段的提款将推迟到第二天。周日的提款申请将推迟到下周一。<br/>2.由于银行系统的提款限制，每次提款需要大于500卢比。<br/>3.取款费：$$$10+5%取款金额<br/><br/>虚假注册账户的奖励将被扣除，账户将被冻结",
-  'wallet_tips': '提现金额必须大于'
-
+  'wallet_tips': '提现金额必须大于',
+  'login_account': '登录账户',
+  'get_income': '获得收入',
+  'withdrawal_record': '提现记录',
+  'invite_text':"邀请你的朋友和获得更多的收入,立即复制邀请链接",
+  'withdrawn_amount': '已提现金额',
+  'can_withdrawn_amount': '可提现金额',
+  'withdrawn_detail': '提现明细',
+  'record': '记录'
 }

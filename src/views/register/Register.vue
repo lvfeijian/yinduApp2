@@ -32,7 +32,7 @@
         </div>
       </section>
       <div class="register_btn" @click="handleRegister">{{$t('register')}}</div>
-      <div class="switch" @click="goLink">{{$t('registered_account')}}></div>
+      <div class="switch" @click="goLink">{{$t('login_account')}}></div>
       <div class="down_app" @click="goDownload">{{$t('download_app')}}</div>
     </div>
   </div>

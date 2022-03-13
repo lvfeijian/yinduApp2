@@ -5,7 +5,7 @@ Vue.use(Notify);
 Vue.use(Toast);
 const Qs = require('qs')
 if (process.env.NODE_ENV === "development") {
-    axios.defaults.baseURL = 'http://ydapp.cenvr.com';
+    axios.defaults.baseURL = 'http://admin.vipcbagent.com/';
 } else {
     // http://api.globejcd.top
     axios.defaults.baseURL = 'http://vipcbagent.com/';

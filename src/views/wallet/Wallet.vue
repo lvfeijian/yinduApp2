@@ -9,6 +9,7 @@
       />
     </div> -->
     <img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
+    <div class="record" @click="goLink">{{$t('record')}}</div>
     <div class="account">
       <div class="text">{{$t('account')}}</div>
       <div class="price">${{total_amount}}</div>
@@ -75,7 +76,10 @@ import {
     },
 
     methods: {
-      goBack: function() {
+      goLink(){
+        this.$router.push('record')
+      },
+      goBack() {
 				this.$router.go(-1)
 			},
       handleWithdrawAll(){

@@ -47,7 +47,10 @@
 		</div>
 		<div class="line"></div>
 		<div class="picture">
-			<img @click="golink('invite')" class="invite" src="../../assets/img/home/invite.png" alt="" />
+			<div class="invite_cont">
+				<img @click="golink('invite')" class="invite" src="../../assets/img/home/invite2.png" alt="" />
+				<div class="text">{{$t('invite_text')}}</div>
+			</div>
 			<div class="list">
 				<div class="item" @click="golink('invite')">
 					<p class="text">{{$t('home.invitation')}}</p>

@@ -98,6 +98,22 @@ export function userReportApi(){
         method: 'post',
     })
 }
+// 用户提现详情
+export function userCashDetailsApi(data){
+    return request({
+        url: 'api/user/cashDetails',
+        method: 'post',
+        data
+    })
+}
+// 用户提现记录
+export function userCashListApi(data){
+    return request({
+        url: 'api/user/cashList',
+        method: 'post',
+        data
+    })
+}
 
 
 

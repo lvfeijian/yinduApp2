@@ -165,6 +165,11 @@ const routes = [
 	    name: 'Recharge',
         component: () => import( '../views/recharge/Recharge')
     },
+    {
+	    path: '/record',
+	    name: 'Record',
+        component: () => import( '../views/record/Record')
+    },
     
    
 ]

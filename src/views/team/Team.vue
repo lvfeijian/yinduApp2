@@ -20,7 +20,7 @@
     </div>
     <div class="table">
       <div class="table_header">
-        <div class="header_item">ID</div>
+        <div class="header_item level">ID</div>
         <div class="header_item">{{$t('account')}}</div>
         <div class="header_item name">{{$t('time')}}</div>
       </div>
