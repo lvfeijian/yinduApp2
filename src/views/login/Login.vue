@@ -68,11 +68,11 @@ export default {
     },
     handleLogin(){
       if(this.phone.trim().length != this.phoneLength){
-        Notify({ type: 'danger', message: 'Wrong mobile phone number format' });
+        Notify({ type: 'danger', message: this.$t('phone_error') });
         return
       }
       if(this.password.trim().length < 6){
-        Notify({ type: 'danger', message: 'password length is greater than 6 digits' });
+        Notify({ type: 'danger', message: this.$t('password_length_tip') });
         return
       }
       Toast.loading({

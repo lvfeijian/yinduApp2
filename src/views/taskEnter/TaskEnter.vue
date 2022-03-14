@@ -36,12 +36,11 @@
         <div class="intro_text" v-html="company"></div>
       </div>
     </div>
-    <Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog"  btnText="BUY NOW">
-			<div>YOU ARE NOT <br>
-				YET A VIP</div>
+    <Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" :btnText="$t('buy')">
+			<div v-html="$t('not_vip')"></div>
     </Dialog>
-    <Dialog @close="doClose2" @handleBtn="handleBtn2" :isShow="isShowDialog2" btnText="TO FINISH">
-      <div v-html="message" style="font-size: 16px;text-align: left"></div>
+    <Dialog @close="doClose2" @handleBtn="handleBtn2" :isShow="isShowDialog2" :btnText="$t('to_finish')">
+      <div v-html="$t('get_task')" style="font-size: 16px;text-align: left"></div>
     </Dialog>
   </div>
 </template>
@@ -94,7 +93,6 @@
         isShowDialog: false,
         isShowDialog2: false,
         bannerImg:[],
-				message: 'CONGRATULATIONS YOU <br>HAVE GRABBED THE TASK <br>REWARD, PLEASE·'
 
       };
     },
@@ -244,7 +242,7 @@
                 }, 2200);
               } else if(this.userInfo.vip_surplus == 0 && (this.userInfo.is_vip == 1||this.userInfo.vip_level=="普通会员")){
                 // 会员 任务次数使用完毕
-                Notify({ type: 'danger', message: '每日任务次数已用完' });
+                Notify({ type: 'danger', message: this.$t('not_task_number') });
                 pos = 0 + this.fontSize
               } else {
                 // 普通用户

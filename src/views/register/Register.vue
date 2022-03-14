@@ -80,21 +80,21 @@ export default {
     // 注册
     handleRegister(){
       if(this.phone.trim().length != this.phoneLength){
-        Toast('Wrong mobile phone number format');
+        Toast(this.$t('phone_error'));
         this.$refs.phone.focus()
         return
       }
       if(this.password.trim().length < 6){
-        Toast('password length is greater than 6 digits');
+        Toast(this.$t('password_length_tip'));
         this.$refs.password.focus()
         return
       }
       if(this.confirmPassword != this.password){
-        Toast('two passwords are inconsistent');
+        Toast(this.$t('pwd_inconsistent'));
         return
       }
       if(this.code.length == 0){
-        Toast('Please fill in the verification code');
+        Toast(this.$t('fill_code'));
         this.$refs.code.focus()
         return
       }

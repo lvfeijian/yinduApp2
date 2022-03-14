@@ -30,7 +30,7 @@
       <div v-html="message" style="font-size: 16px;text-align: left"></div>
     </Dialog> -->
 		<div class="count_down" v-if="isShowCountDown">
-			剩余{{videoInfo.view_time}}秒完成广告分发，获得奖励
+			{{$t('surplus')}}{{videoInfo.view_time}}{{$t('get_record')}}
 		</div>
 	</div>
 </template>
@@ -44,10 +44,12 @@
 	import Dialog from '@/components/common/dialog/Dialog'
 	import {
 		NavBar,
-		Notify
+		Notify,
+		Toast
 	} from 'vant';
 	Vue.use(Notify);
 	Vue.use(NavBar);
+	Vue.use(Toast);
 	export default {
 		data() {
 			return {
@@ -100,7 +102,7 @@
 									auth_code: this.videoInfo.auth_code
 								}).then(res => {
 									if(res.code == 1){
-										Notify({ type: 'success', message: '成功投放广告，获得收益' });
+										Toast(this.$t('success_advertising'));
 									}
 								})
 							}

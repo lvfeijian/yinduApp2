@@ -111,7 +111,7 @@ export default {
   'introduce': '介绍',
   'not_vip': '你不是会员',
   'buy': '立即购买',
-  'rules':"CBAgent钱包取款规则：<br/>1.周一至周六，每天10:00-16:00，超过此时间段的提款将推迟到第二天。周日的提款申请将推迟到下周一。<br/>2.由于银行系统的提款限制，每次提款需要大于500卢比。<br/>3.取款费：$$$10+5%取款金额<br/><br/>虚假注册账户的奖励将被扣除，账户将被冻结",
+  'rules':"CBAgent钱包取款规则：<br/>1.周一至周六，每天10:00-16:00，超过此时间段的提款将推迟到第二天。周日的提款申请将推迟到下周一。<br/>2.由于银行系统的提款限制，每次提款需要大于500卢比。<br/>3.取款费：$1500+5%取款金额<br/><br/>虚假注册账户的奖励将被扣除，账户将被冻结",
   'wallet_tips': '提现金额必须大于',
   'login_account': '登录账户',
   'get_income': '获得收入',
@@ -120,5 +120,16 @@ export default {
   'withdrawn_amount': '已提现金额',
   'can_withdrawn_amount': '可提现金额',
   'withdrawn_detail': '提现明细',
-  'record': '记录'
+  'record': '记录',
+  'phone_error': '手机号码格式错误',
+  'password_length_tip': '密码长度大于6位',
+  'get_task': '恭喜你拿到了任务<br>奖励·',
+  'pwd_inconsistent': '两次密码不一致',
+  'fill_code': '请填写验证码',
+  'not_task_number': '每日任务次数已用完',
+  'not_vip': '你还不是vip',
+  'to_finish': '去完成',
+  'surplus': '剩余',
+  'get_record': '秒完成广告分发，获得奖励',
+  'success_advertising': '成功投放广告，获得收益'
 }

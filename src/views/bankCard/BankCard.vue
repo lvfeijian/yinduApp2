@@ -11,7 +11,6 @@
     <div class="content">
       <input type="text" v-model="real_name" :placeholder="$t('bankcard.real_name')">
       <input type="text" v-model="bank_name" :placeholder="$t('bankcard.bank_name')">
-      <input type="text" v-model="branch_name" :placeholder="$t('bankcard.branch_name')">
       <input type="number" v-model="account_no" :placeholder="$t('bankcard.account_no')">
       <input type="text" v-model="ifsc_code" :placeholder="$t('bankcard.ifsc_code')">
       <input type="number" v-model="phone" :placeholder="$t('bankcard.phone')">
@@ -39,7 +38,6 @@ import {
       return {
         real_name: null,
         bank_name: null,
-        branch_name: null,
         account_no: null,
         ifsc_code: null,
         phone: null,
@@ -67,7 +65,6 @@ import {
         bindBankCard({
           real_name: this.real_name,
           bank_name: this.bank_name,
-          branch_name: this.branch_name,
           account_no: this.account_no,
           ifsc_code: this.ifsc_code,
           phone: this.phone,
