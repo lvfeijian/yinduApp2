@@ -111,7 +111,7 @@ export default {
   'introduce': 'introducir',
   'not_vip': 'no tienes AI',
   'buy': 'Recargar ahora',
-  'rules':"Reglas de retiro de la billetera BCA:</br>1. De lunes a viernes, de 10:00 a 18:00 todos los días, fuera de este horario no se pueden realizar retiros. No se pueden solicitar retiros los sábados y domingos.</br>2. Debido a las restricciones de retiro del sistema bancario, cada retiro debe ser mayor a 12,500 pesos.</br>3. Tarifa de retiro: $ 2000 + 5% del monto del retiro</br></br>La cuenta registrada falsa será una cuenta congelada",
+  'rules':"Reglas de retiro de la billetera CBAgent:</br>1. De lunes a viernes, de 10:00 a 18:00 todos los días, fuera de este horario no se pueden realizar retiros. No se pueden solicitar retiros los sábados y domingos.</br>2. Debido a las restricciones de retiro del sistema bancario, cada retiro debe ser mayor a 12,500 pesos.</br>3. Tarifa de retiro: $ 2000 + 5% del monto del retiro</br></br>La cuenta registrada falsa será una cuenta congelada",
   'wallet_tips': 'Cantidad retirada superior a',
   'login_account': 'Cuenta de inicio de sesión',
   'get_income': 'Obtener ingresos',

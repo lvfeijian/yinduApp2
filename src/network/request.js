@@ -7,8 +7,7 @@ const Qs = require('qs')
 if (process.env.NODE_ENV === "development") {
     axios.defaults.baseURL = 'http://admin.vipcbagent.com/';
 } else {
-    // http://api.globejcd.top
-    axios.defaults.baseURL = 'http://vipcbagent.com/';
+    axios.defaults.baseURL = 'http://admin.vipcbagent.com/';
 }
 axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
 // 请求发送之前的拦截器
