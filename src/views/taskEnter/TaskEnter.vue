@@ -119,14 +119,15 @@
         }
       })
       // 获取任务中心数据
-			getTaskList().then(res => {
-				if(res.code == 1){
-					this.bannerImg = res.data
-					if(res.data.length == 0){
-						this.isShowDialog2 = true
-					}
-				}
-			})
+			// getTaskList().then(res => {
+      //   console.log(res);
+			// 	if(res.code == 1){
+			// 		this.bannerImg = res.data
+			// 		if(res.data.length == 0){
+			// 			this.isShowDialog = true
+			// 		}
+			// 	}
+			// })
     },
 
     methods: {
@@ -139,7 +140,7 @@
       },
 			handleBtn(){
 				this.isShowDialog = false
-				this.$router.push('/member')
+				this.$router.push('/memberCenter')
       },
       handleBtn2(){
         randVipTaskApi().then(res => {

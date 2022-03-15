@@ -99,7 +99,7 @@ export default {
         return
       }
       Toast.loading({
-        message: 'register...',
+        message: this.$t('register') + '...',
         forbidClick: true,
         duration: 10000
       });
@@ -111,7 +111,7 @@ export default {
       }).then(res => {
         if(res.code == 1){
           this.$router.push('/login')
-          Toast('Register success, Please login');
+          Toast(this.$t('register_success'));
         }
       })
     },

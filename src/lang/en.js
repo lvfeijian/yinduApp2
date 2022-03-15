@@ -7,8 +7,8 @@ export default {
   'login': 'login',
   'account_number': 'account number ',
   'password': 'password',
-  'registered_account': 'registered account ',
-  'register': "main vehicle",
+  'registered_account': 'registered account',
+  'register': "register",
   'phone_number': 'phone number ',
   'input_password': 'enter password ',
   'confirm_password': 'confirm password ',
@@ -77,7 +77,7 @@ export default {
     'Withdrawal_success': 'withdrawal succeeded'
   },
   bankcard: {
-    title: 'bank card',
+    title: 'Bank Card',
     real_name: 'real name *',
     bank_name: 'bank name *',
     branch_name: 'branch name',
@@ -132,4 +132,7 @@ export default {
   'surplus': 'Complete advertisement distribution with',
   'get_record': 'Complete advertisement distribution with',
   'success_advertising': 'Successful advertising and revenue',
+  'change': 'CHANGE',
+  'register_success': 'Register success, Please login',
+  'no_service': 'no service',
 }

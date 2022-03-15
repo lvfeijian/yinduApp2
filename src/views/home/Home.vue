@@ -278,7 +278,7 @@
 		methods: {
 			goService2(){
         if(this.chatUrl.url2 == ''){
-          Toast( 'no service');
+          Toast(this.$t('no_service'));
           return
         }
         window.location.href = this.chatUrl.url2

@@ -240,14 +240,14 @@
       },
       goService1(){
         if(this.chatUrl.url1 == ''){
-          Toast( 'no service');
+          Toast(this.$t('no_service'));
           return
         }
         window.location.href = this.chatUrl.url1
       },
       goService2(){
         if(this.chatUrl.url2 == ''){
-          Toast( 'no service');
+          Toast(this.$t('no_service'));
           return
         }
         window.location.href = this.chatUrl.url2

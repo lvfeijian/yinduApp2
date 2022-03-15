@@ -76,7 +76,7 @@ export default {
         return
       }
       Toast.loading({
-        message: 'login...',
+        message: this.$t('login')+ '...',
         forbidClick: true,
         duration: 10000
       });

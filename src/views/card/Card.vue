@@ -3,7 +3,7 @@
   <div class="card">
     <div class="header">
       <van-nav-bar
-        title="BANK CARD"
+        :title="$t('bankcard.title')"
         left-arrow
         @click-left="onClickLeft"
       />
@@ -14,7 +14,7 @@
       <img class="card_img" src="../../assets/img/card/card.png" alt="" />
       <div class="bank_name">{{bankCardInfo.bank_name}}</div>
       <div class="bank_number">****  ****  ****  {{bankCardInfo.account_no.slice(-4)}}</div>
-      <div class="change" @click="handleChange">CHANGE</div>
+      <div class="change" @click="handleChange">{{$t('change')}}</div>
     </div>
   </div>
 </template>

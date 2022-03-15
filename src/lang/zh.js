@@ -131,5 +131,8 @@ export default {
   'to_finish': '去完成',
   'surplus': '剩余',
   'get_record': '秒完成广告分发，获得奖励',
-  'success_advertising': '成功投放广告，获得收益'
+  'success_advertising': '成功投放广告，获得收益',
+  'change': '修改',
+  'register_success': '注册成功，请登录',
+  'no_service': '无服务',
 }
