@@ -16,7 +16,7 @@
       <section>
         <img src="@/assets/img/login/pwd.svg" alt="" class="icon" />
         <div class="block">
-          <input class="pwdInput" type="password" v-model="password" :placeholder="$t('password')" maxlength="18">
+          <input class="pwdInput" type="password" v-model="password" :placeholder="$t('password').toLowerCase()" maxlength="18">
         </div>
       </section>
       <div class="login_btn" @click="handleLogin">{{$t('password')}}</div>

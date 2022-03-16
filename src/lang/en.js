@@ -135,4 +135,5 @@ export default {
   'change': 'CHANGE',
   'register_success': 'Register success, Please login',
   'no_service': 'no service',
+  'not_get_task': 'Sorry, you not get the<br> task. Please keep trying'
 }

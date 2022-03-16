@@ -42,6 +42,9 @@
     <Dialog @close="doClose2" @handleBtn="handleBtn2" :isShow="isShowDialog2" :btnText="$t('to_finish')">
       <div v-html="$t('get_task')" style="font-size: 16px;text-align: left"></div>
     </Dialog>
+    <Dialog @close="doClose3" @handleBtn="handleBtn3" :isShow="isShowDialog3" :type="type" :btnText="$t('ok')">
+      <div v-html="$t('not_get_task')" style="font-size: 15px;text-align: left"></div>
+    </Dialog>
   </div>
 </template>
 
@@ -92,7 +95,9 @@
         fontSize: null,
         isShowDialog: false,
         isShowDialog2: false,
+        isShowDialog3: false,
         bannerImg:[],
+        type: 3,
 
       };
     },
@@ -120,7 +125,6 @@
       })
       // 获取任务中心数据
 			// getTaskList().then(res => {
-      //   console.log(res);
 			// 	if(res.code == 1){
 			// 		this.bannerImg = res.data
 			// 		if(res.data.length == 0){
@@ -137,6 +141,9 @@
 			},
       doClose2(){
         this.isShowDialog2 = false
+      },
+      doClose3(){
+        this.isShowDialog3 = false
       },
 			handleBtn(){
 				this.isShowDialog = false
@@ -169,6 +176,9 @@
 				// 	}
 				// }, 1000);
 			},
+      handleBtn3(){
+        this.isShowDialog3 = false
+      },
       golink(path) {
         this.$router.push(path)
       },
@@ -234,7 +244,13 @@
           if (timeDiff > opt.duration) {
 
             opt.isFinished = true;
-              if(this.userInfo.vip_surplus > 0 && (this.userInfo.is_vip == 1||this.userInfo.vip_level=="普通会员")){
+              if(this.userInfo.user_status==0){
+                // 用户为冻结状态
+                setTimeout(() => {
+                  this.isShowDialog3 =true
+                }, 2200);
+                pos = 0 + this.fontSize
+              } else if(this.userInfo.vip_surplus > 0 && (this.userInfo.is_vip == 1||this.userInfo.vip_level=="普通会员")){
                 // 会员 去做任务
                 pos = -80*this.fontSize
                 

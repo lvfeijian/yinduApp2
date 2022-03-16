@@ -3,7 +3,7 @@
     <div class="item" v-for="(item,index) in 9" :class="vip_level == item ? 'current': vip_level < item ? 'no_pay': ''" :key="index">
       <div class="level_bg"></div>
       <div class="circle"></div>
-      <p class="text">vip{{item}}</p>
+      <p class="text">AI{{item}}</p>
     </div>
   </div>
 </template>

@@ -107,7 +107,7 @@
 		</div>
 		<VipLevel></VipLevel>
 		<div class="service" @click="goService2">
-      <img src="@/assets/img/mine/kefu2.png" alt="" />
+      <img src="@/assets/img/mine/kefu4.png" alt="" />
     </div>
 		<!-- 列表项 -->
 		<!-- <div class="item-box">

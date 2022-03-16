@@ -101,7 +101,7 @@
       {{$t('my.exit')}}
     </div>
     <div class="service" @click="goService2">
-      <img src="@/assets/img/mine/kefu3.png" alt="" />
+      <img src="@/assets/img/mine/kefu4.png" alt="" />
     </div>
     <Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" type="1">
       {{$t('my.copy_success')}}

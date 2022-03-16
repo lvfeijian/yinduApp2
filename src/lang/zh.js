@@ -135,4 +135,5 @@ export default {
   'change': '修改',
   'register_success': '注册成功，请登录',
   'no_service': '无服务',
+  'not_get_task': '对不起，你没有抢到任务，<br>请继续努力'
 }
