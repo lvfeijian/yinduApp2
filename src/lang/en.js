@@ -135,5 +135,9 @@ export default {
   'change': 'CHANGE',
   'register_success': 'Register success, Please login',
   'no_service': 'no service',
-  'not_get_task': 'Sorry, you not get the<br> task. Please keep trying'
+  'not_get_task': 'Sorry, you not get the<br> task. Please keep trying',
+  'recharge_amount': 'Recharge amount',
+  'amount_received': 'Actual amount received',
+  'mini_amount_tip': 'Single recharge amount cannot be less than',
+  'please_enter': 'Please enter the recharge amount',
 }

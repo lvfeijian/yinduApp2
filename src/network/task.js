@@ -35,5 +35,14 @@ export function randVipTaskApi(params){
     })
 }
 
+// 用户状态异常抽奖消耗次数
+export function userLuckDrawApi(data){
+    return request({
+        url: 'api/user/luckDraw',
+        method: 'post',
+        data
+    })
+}
+
 
 

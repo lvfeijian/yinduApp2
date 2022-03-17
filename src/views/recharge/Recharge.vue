@@ -3,19 +3,19 @@
   <div class="recharge">
     <img class="back_icon" src="../../assets/img/back.svg" alt="" @click="goBack" />
     <div class="account">
-      <div class="text">充值金额</div>
+      <div class="text">{{$t('recharge_amount')}}</div>
       <div class="price">${{money || 0}}</div>
     </div>
     <div class="card">
-      <div class="tips">实际到账金额：${{money || 0}}</div>
+      <div class="tips">{{$t('amount_received')}}：${{money || 0}}</div>
       <div class="withdraw">
         <div class="sign">$</div>
         <van-field class="ipt" v-model="money" type="number" placeholder="≥15000" />
       </div>
-      <div class="btn" @click="investMoney">充值</div>
+      <div class="btn" @click="investMoney">{{$t('memberCenter.recharge')}}</div>
     </div>
     <div class="rule_text">
-      单笔充值金额不能少于15000
+      {{$t('mini_amount_tip')}}15000
     </div>
     <Dialog @close="doClose" @handleBtn="handleBtn" :isShow="isShowDialog" :type="type">
       {{message}}
@@ -68,12 +68,12 @@ import {
             this.isShowDialog = true
             this.message = res.msg
             this.type = 1
-            this.btnText = 'ok'
+            this.btnText = this.$t('ok')
           } else {
             this.isShowDialog = true
             this.message = res.msg
             this.type = 2
-            this.btnText = 'ok'
+            this.btnText = this.$t('ok')
           }
         }).catch(() =>{
           window.localStorage.removeItem('out_trade_no')
@@ -89,11 +89,11 @@ import {
       // 充值按钮
       investMoney(){
         if(this.money == 0 || this.money == ''){
-          Notify({ type: 'warning', message: '请输入充值金额' });
+          Notify({ type: 'warning', message: this.$t('please_enter') });
 					return
         }
         if(this.money<15000){
-          Notify({ type: 'warning', message: '充值金额不能小于15000' });
+          Notify({ type: 'warning', message: this.$t('mini_amount_tip') + '15000' });
 					return
         }
         usePayApi({

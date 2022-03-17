@@ -55,7 +55,8 @@
   } from '@/network/introduct'
   import {
     getTaskList,
-    randVipTaskApi
+    randVipTaskApi,
+    userLuckDrawApi
 	} from '@/network/task'
   import {
     getUserInfo,
@@ -186,10 +187,12 @@
         if(status){
           document.body.scrollIntoView()
         }
-        getUserInfo().then(res => {
-          if (res.code == 1) {
-            this.userInfo = res.data
-          }
+        userLuckDrawApi().then(res => {
+          getUserInfo().then(res => {
+            if (res.code == 1) {
+              this.userInfo = res.data
+            }
+          })
         })
         if (this.opts) {
           return;

@@ -135,5 +135,9 @@ export default {
   'change': 'Cambiar',
   'register_success': 'Registro exitoso, por favor inicie sesión',
   'no_service': 'No hay servicio',
-  'not_get_task': 'Lo siento, no conseguiste<br> la tarea, por favor sigue<br> trabajando duro'
+  'not_get_task': 'Lo siento, no conseguiste<br> la tarea, por favor sigue<br> trabajando duro',
+  'recharge_amount': 'Cantidad recargada',
+  'amount_received': 'Importe real de la cuenta',
+  'mini_amount_tip': 'La cantidad de recarga única no puede ser inferior a',
+  'please_enter': 'Introduzca la cantidad de recarga',
 }

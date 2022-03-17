@@ -135,5 +135,9 @@ export default {
   'change': '修改',
   'register_success': '注册成功，请登录',
   'no_service': '无服务',
-  'not_get_task': '对不起，你没有抢到任务，<br>请继续努力'
+  'not_get_task': '对不起，你没有抢到任务，<br>请继续努力',
+  'recharge_amount': '充值金额',
+  'amount_received': '实际到账金额',
+  'mini_amount_tip': '单笔充值金额不能少于',
+  'please_enter': '请输入充值金额',
 }
