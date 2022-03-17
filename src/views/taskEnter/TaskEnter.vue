@@ -251,7 +251,7 @@
                 // 用户为冻结状态
                 setTimeout(() => {
                   this.isShowDialog3 =true
-                }, 2200);
+                }, 2000);
                 pos = 0 + this.fontSize
               } else if(this.userInfo.vip_surplus > 0 && (this.userInfo.is_vip == 1||this.userInfo.vip_level=="普通会员")){
                 // 会员 去做任务

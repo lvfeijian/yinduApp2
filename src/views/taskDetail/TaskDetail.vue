@@ -71,7 +71,6 @@
 		computed: {},
 		created(){
 			console.log(this.$route.query.id);
-			
 			this.id = this.$route.query.id
 			this.getTaskDetail()
 		},
@@ -90,7 +89,7 @@
 						this.videoInfo = res.data
 						setTimeout(() => {
 							this.$refs.video.play()
-						}, 800);
+						}, 1000);
 						this.isShowCountDown = true
 						this.timer = setInterval(() => {
 							this.videoInfo.view_time--
@@ -102,7 +101,12 @@
 									auth_code: this.videoInfo.auth_code
 								}).then(res => {
 									if(res.code == 1){
-										Toast(this.$t('success_advertising'));
+										Toast({
+											message: this.$t('success_advertising'),
+											className: 'bgColor',
+											duration: 3000,
+											icon: require('../../assets/img/taskEnter/tips.png')
+										});
 									}
 								})
 							}
@@ -131,4 +135,10 @@
 </script>
 <style lang='less' scoped>
 	@import url('./taskDetail.less');
+</style>
+<style>
+	.bgColor{
+		background-color: #5084FD!important;
+		color: #fff!important;
+	}
 </style>
