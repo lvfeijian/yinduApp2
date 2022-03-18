@@ -105,7 +105,6 @@
 											message: this.$t('success_advertising'),
 											className: 'bgColor',
 											duration: 3000,
-											icon: require('../../assets/img/taskEnter/tips.png')
 										});
 									}
 								})
@@ -140,5 +139,7 @@
 	.bgColor{
 		background-color: #5084FD!important;
 		color: #fff!important;
+		font-size: 16px!important;
+		max-width: 80%!important;
 	}
 </style>
