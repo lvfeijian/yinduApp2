@@ -70,7 +70,7 @@ export default {
     'every': 'genera por tarea ',
     'finish_task': 'Misión completada',
     'remain_task': 'Tareas restantes',
-    'task_intro': 'introducción de tareas',
+    'task_intro': 'Introducción de tareas',
   },
   wallet: {
     'withdrawal_balance':'Saldo disponible',
@@ -86,7 +86,7 @@ export default {
     phone:'Teléfono',
     email:'Email',
     bind_success: 'Guardado exitosamente',
-    confirm: 'guardar'
+    confirm: 'Guardar'
   },
   'sign_in': 'check-in',
   'platform_notice': 'Notificaciones',
@@ -111,7 +111,7 @@ export default {
   'introduce': 'Introducir',
   'not_vip': 'no tienes AI',
   'buy': 'Recarga',
-  'rules':"Reglas de retiro de la billetera CBAgent:</br>1. De lunes a viernes, de 10:00 a 18:00 todos los días, fuera de este horario no se pueden realizar retiros. No se pueden solicitar retiros los sábados y domingos.</br>2. Debido a las restricciones de retiro del sistema bancario, cada retiro debe ser mayor a 12,500 pesos.</br>3. Tarifa de retiro: $ 1500 + 5% del monto del retiro</br></br>Las cuentas registradas falsas se congelaran",
+  'rules':"Reglas de retiro de la billetera CBAgent:</br>1. De lunes a viernes, de 10:00 a 18:00 todos los días, fuera de este horario no se pueden realizar retiros. No se pueden solicitar retiros los sábados y domingos.</br>2. Debido a las restricciones de retiro del sistema bancario, cada retiro debe ser mayor a 12,500 pesos.</br>3. Tarifa de retiro: $ 1500 + 5% del monto del retiro，Solo puede solicitar el retiro una vez al día</br></br>Las cuentas registradas falsas se congelaran",
   'wallet_tips': 'Cantidad retirada superior a',
   'login_account': 'Cuenta de inicio de sesión',
   'get_income': 'Obtener ingresos',
