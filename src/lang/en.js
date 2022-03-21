@@ -82,7 +82,7 @@ export default {
     bank_name: 'bank name *',
     branch_name: 'branch name',
     account_no: 'number',
-    ifsc_code: 'IFSC code',
+    ifsc_code: 'ID card *',
     Phone: 'phone',
     Email: 'mailbox',
     bind_success: 'binding succeeded',

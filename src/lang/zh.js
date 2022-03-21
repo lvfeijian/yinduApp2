@@ -82,7 +82,7 @@ export default {
     bank_name:'银行名称*',
     branch_name:'分支机构名称',
     account_no:'号码',
-    ifsc_code:'IFSC代码',
+    ifsc_code:'身份证号码*',
     phone:'电话',
     email:'邮箱',
     bind_success: '绑定成功',

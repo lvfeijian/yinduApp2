@@ -79,10 +79,10 @@ export default {
   bankcard: {
     title: 'Tarjeta bancaria',
     real_name: 'Nombre *',
-    bank_name:'Nombre del banco*',
+    bank_name:'Nombre del banco *',
     branch_name:'Nombre de la sucursal',
     account_no:'Cuenta bancaria',
-    ifsc_code:'ID',
+    ifsc_code:'CC/TI *',
     phone:'Teléfono',
     email:'Email',
     bind_success: 'Guardado exitosamente',
